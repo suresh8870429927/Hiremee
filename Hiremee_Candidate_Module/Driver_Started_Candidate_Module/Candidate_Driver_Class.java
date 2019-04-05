@@ -73,7 +73,7 @@ public class Candidate_Driver_Class {
 		extent.setSystemInfo("Host Name", "Regression_Testing");
 		extent.setSystemInfo("Environment", "UAT");
 		extent.setSystemInfo("User Name", "Automation Tester");
-		smoke_testing.config().setDocumentTitle("Hiremee_Web_Portal_UAT_candidate_module_Regression_Testing.");
+		smoke_testing.config().setDocumentTitle("Hiremee_Web_Portal_UAT_candidate_module_Regression_Testing");
 		smoke_testing.config().setReportName("Hiremee_Execution_Report");		
 		smoke_testing.config().setTheme(Theme.DARK);
 	}
