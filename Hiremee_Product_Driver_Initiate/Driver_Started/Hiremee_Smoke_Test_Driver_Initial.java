@@ -107,7 +107,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		config=new Property_File_Config();
 		//WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.driver",config.getChromeDriver());
-		Reporter.log(">=============================Hiremee_Project_Driver_Initiated...=====================================<",true);
+		Reporter.log(">=============================Hiremee_Project_Driver_Initiated=====================================<",true);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		Reporter.log(">=============================Hiremee_Project_Browser_Started=====================================<",true);
