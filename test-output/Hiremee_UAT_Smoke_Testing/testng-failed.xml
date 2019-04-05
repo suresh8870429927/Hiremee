@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Hiremee_UAT_Smoke_Testing]">
+  <test thread-count="5" name="Automation_Testing(failed)">
+    <classes>
+      <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial">
+        <methods>
+          <include name="Hiremee_Web_pro_Vew_Result_Testcase"/>
+          <include name="driver_close"/>
+          <include name="Hiremee_Web_pro_Manage_candidates_invite_sends_Testcase"/>
+          <include name="Hiremee_Web_pro_Purchase_Assessment_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_candidates_Test_started_Testcase"/>
+          <include name="startReport"/>
+          <include name="Hiremee_Web_pro_Manage_Assessment_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_Assessment_my_Questions_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_candidates_invite_pendings_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_Assessment_myot_Testcase"/>
+          <include name="Hiremee_Web_pro_Book_Assessment_Testcase"/>
+          <include name="Hiremee_Web_pro_Logout_Testcase"/>
+          <include name="Hiremee_Web_pro_Dashboard_Testcase"/>
+          <include name="getResult"/>
+          <include name="teardown"/>
+          <include name="Start_driver"/>
+          <include name="Hiremee_Web_pro_Manage_candidates_Test_Expired_Testcase"/>
+          <include name="Hiremee_Web_pro_Book_Assessment_Upload_candidates_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_Assessment_manage_pools_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_Assessment_manage_Questions_Testcase"/>
+          <include name="Hiremee_Web_pro_Home_Testcase"/>
+          <include name="Hiremee_Web_pro_Login_Testcase"/>
+          <include name="Hiremee_Web_pro_Manage_candidates_Testcase"/>
+        </methods>
+      </class> <!-- Driver_Started.Hiremee_Smoke_Test_Driver_Initial -->
+    </classes>
+  </test> <!-- Automation_Testing(failed) -->
+</suite> <!-- Failed suite [Hiremee_UAT_Smoke_Testing] -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hiremee_UAT_Smoke_Testing">
+  <test thread-count="5" name="Automation_Testing">
+    <classes>
+      <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+

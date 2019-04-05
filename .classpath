@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="Hiremee_CMS_UAT_smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_Candidate_UAT_smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_College_UAT_Smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_Company_UAT_Smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_Recruiter_UAT_Smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_Product_Driver_Initiate"/>
+	<classpathentry kind="src" path="Hiremee_Assessment_Admin_UAT_Smoke_Testing"/>
+	<classpathentry kind="src" path="Hiremee_Jobs"/>
+	<classpathentry kind="src" path="Hiremee_Pro_UAT_Smoke_Testing"/>
+	<classpathentry kind="src" path="Redmine_Bug_Reporting"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/email_report/commons-email-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/email_report/javax.mail.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/email_report/javax.mail-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/extentreports-3.0.6.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/extentreports-java-3.0.6/extentreports-java-3.0.6/lib/testng-6.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/poi-bin-3.17-20170915/poi-3.17/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/client-combined-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/libs/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/selenium-java-3.141.59/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="D:/suresh QA/jar automation/jar_files/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/commons-compress-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/commons-lang3-3.7.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/jarchivelib-0.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="D:/griddriver/WebDriver_Manager/webdrivermanager-3.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/slf4j-api-1.6.6.jar"/>
+	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/zt-zip-1.13.jar"/>
+	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/zt-zip-1.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
