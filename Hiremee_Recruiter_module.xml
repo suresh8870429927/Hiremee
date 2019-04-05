@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hiremee_Web_Portal_Regression_Testcase">
+  <test thread-count="5" name="Automation Testing">
+    <classes>
+      <class name="Driver_Started_Receruiter_Module.Recruiter_Driver_Class"/>
+    </classes>
+  </test> <!-- Automation Testing -->
+</suite> <!-- Hiremee_Web_Portal_Regression_Testcase -->

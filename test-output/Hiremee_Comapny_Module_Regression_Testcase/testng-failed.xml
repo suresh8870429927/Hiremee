@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Hiremee_Comapny_Module_Regression_Testcase]">
+  <test thread-count="5" name="Automation_Testing(failed)">
+    <classes>
+      <class name="Driver_Started_Company_Module.Driver_Class">
+        <methods>
+          <include name="driver_close"/>
+          <include name="getResult"/>
+          <include name="Company_feedback_TestCase"/>
+          <include name="startReport"/>
+          <include name="teardown"/>
+          <include name="Start_driver"/>
+        </methods>
+      </class> <!-- Driver_Started_Company_Module.Driver_Class -->
+    </classes>
+  </test> <!-- Automation_Testing(failed) -->
+</suite> <!-- Failed suite [Hiremee_Comapny_Module_Regression_Testcase] -->
