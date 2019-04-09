@@ -1,54 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5707" started-at="2019-04-08T06:53:28Z" finished-at="2019-04-08T06:53:33Z">
+  <suite name="Default suite" duration-ms="344818" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:29:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5707" started-at="2019-04-08T06:53:28Z" finished-at="2019-04-08T06:53:33Z">
-      <class name="Hiremee_Pro_Company_Assessment_Testcase.Exam_Duration_Assessment_Testcase">
-        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Hiremee_Pro_Company_Assessment_Testcase.Exam_Duration_Assessment_Testcase@752325ad]" name="Start_driver" is-config="true" duration-ms="3855" started-at="2019-04-08T06:53:28Z" finished-at="2019-04-08T06:53:31Z">
+    <test name="Default test" duration-ms="344818" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:29:19Z">
+      <class name="Driver_Started_Company_Module.Driver_Class">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="startReport" is-config="true" duration-ms="1432" started-at="2019-04-09T13:23:32Z" finished-at="2019-04-09T13:23:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Start_driver" is-config="true" duration-ms="4932" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:23:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Start_driver -->
-        <test-method status="FAIL" signature="Exam_Duration_Assessment_Test()[pri:0, instance:Hiremee_Pro_Company_Assessment_Testcase.Exam_Duration_Assessment_Testcase@752325ad]" name="Exam_Duration_Assessment_Test" duration-ms="1826" started-at="2019-04-08T06:53:32Z" finished-at="2019-04-08T06:53:33Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="PASS" signature="Company_Login_Testcase()[pri:1, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Company_Login_Testcase" duration-ms="9621" started-at="2019-04-09T13:23:39Z" finished-at="2019-04-09T13:23:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Company_Login_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="9" started-at="2019-04-09T13:23:48Z" finished-at="2019-04-09T13:23:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Company_Login_Testcase status=SUCCESS method=Driver_Class.Company_Login_Testcase()[pri:1, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Manage_Assessment()[pri:8, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Assessment" duration-ms="103162" started-at="2019-04-09T13:23:48Z" finished-at="2019-04-09T13:25:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Assessment -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-09T13:25:32Z" finished-at="2019-04-09T13:25:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Manage_Assessment status=SUCCESS method=Driver_Class.Manage_Assessment()[pri:8, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Manage_Book_Assessment()[pri:9, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Book_Assessment" duration-ms="41092" started-at="2019-04-09T13:25:32Z" finished-at="2019-04-09T13:26:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Book_Assessment -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-09T13:26:13Z" finished-at="2019-04-09T13:26:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Manage_Book_Assessment status=SUCCESS method=Driver_Class.Manage_Book_Assessment()[pri:9, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="Manage_Candidate_Testcases()[pri:10, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Candidate_Testcases" duration-ms="185057" started-at="2019-04-09T13:26:13Z" finished-at="2019-04-09T13:29:18Z">
+          <exception class="java.lang.ArrayIndexOutOfBoundsException">
             <message>
-              <![CDATA[no such window
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'V2IT01', ip: '172.16.3.31', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\SURV2E~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49996}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: 303d7893a5276038b2b20b2871a032e1]]>
+              <![CDATA[19]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'V2IT01', ip: '172.16.3.31', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\SURV2E~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49996}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: 303d7893a5276038b2b20b2871a032e1
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
-at Hiremee_Pro_Compaany_Assessment_Pages.Exam_Duration_Assessment_Pages.Pro_Exam_Duration_Assesment(Exam_Duration_Assessment_Pages.java:48)
-at Hiremee_Pro_Company_Assessment_Testcase.Exam_Duration_Assessment_Testcase.Exam_Duration_Assessment_Test(Exam_Duration_Assessment_Testcase.java:33)
+              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 19
+at Hiremee_Company_Module_Pages.Company_Pro_Manage_Candidate_Page.company_manage_candidate(Company_Pro_Manage_Candidate_Page.java:75)
+at Hiremee_Company_Module_Testcases.Company_Pro_Manage_Candidate_Testcase.Manage_candidate_Test(Company_Pro_Manage_Candidate_Testcase.java:25)
+at Driver_Started_Company_Module.Driver_Class.Manage_Candidate_Testcases(Driver_Class.java:268)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,11 +97,30 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Exam_Duration_Assessment_Test -->
-      </class> <!-- Hiremee_Pro_Company_Assessment_Testcase.Exam_Duration_Assessment_Testcase -->
+        </test-method> <!-- Manage_Candidate_Testcases -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="712" started-at="2019-04-09T13:29:18Z" finished-at="2019-04-09T13:29:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Manage_Candidate_Testcases status=FAILURE method=Driver_Class.Manage_Candidate_Testcases()[pri:10, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="driver_close" is-config="true" duration-ms="198" started-at="2019-04-09T13:29:18Z" finished-at="2019-04-09T13:29:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driver_close -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="teardown" is-config="true" duration-ms="5340" started-at="2019-04-09T13:29:19Z" finished-at="2019-04-09T13:29:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Driver_Started_Company_Module.Driver_Class -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

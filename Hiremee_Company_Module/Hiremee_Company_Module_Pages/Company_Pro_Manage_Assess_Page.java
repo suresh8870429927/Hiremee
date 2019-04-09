@@ -23,6 +23,9 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@FindBy(how=How.LINK_TEXT,using="Manage Questions")
 	WebElement Manage_Questions;
 	
+	@FindBy(how=How.LINK_TEXT,using="My Questions")
+	WebElement My_Questions;
+	
 	@FindBy(how=How.LINK_TEXT,using="MYOT")
 	WebElement Myot;
 	
@@ -77,6 +80,9 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@FindBy(how=How.XPATH,using="//div[@class='note-editable']")
 	WebElement Create_New_Assessment_Exam_Instruction;
 	
+	@FindBy(how=How.ID,using="js-pro-is_feedback_switch-label")
+	WebElement Create_New_Assessment_Enable_Feedback;
+	
 	@FindBy(how=How.ID,using="miot-save-step-1")
 	WebElement Create_New_Assessment_Submit_Button;
 	
@@ -119,23 +125,43 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@FindBy(how=How.ID,using="js-pro-save-step4")
 	WebElement Create_New_Assessment_Fourth_Page_Save_proceed_Button;
 	
+	@FindBy(how=How.XPATH,using="//label[@class='js-pro-score_display_value']")
+	WebElement Create_New_Assessment_Score_Dusplay;
+	
 	@FindBy(how=How.ID,using="js-pro-save-step5")
 	WebElement Create_New_Assessment_Fifth_Page_Save_proceed_Button;
 	
 	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Create_New_Assessment_Assessment_Confirm_Button;
 	
+	//my questions
+	@FindBy(how=How.XPATH,using="//i[@class='hmepro-icon-myot f-20 m-r-0']")
+	WebElement My_Questions_Edit_Button;
 	
+	@FindBy(how=How.XPATH,using="//input[@class='btn btn-primary f-16 waves-effect' and @type='submit']")
+	WebElement My_Questions_Edit_Button_Update_Question;
+	
+	@FindBy(how=How.ID,using="js-pro-question-view")
+	WebElement My_Questions_Preview_Button;
+	
+	@FindBy(how=How.XPATH,using="//button[@class='btn btn-sm btn-danger' and @type='button']")
+	WebElement My_Questions_Preview_Button_Modal_close;
+	
+	@FindBy(how=How.ID,using="js-pool-master")
+	WebElement My_Questions_pool_dropdown;
+	
+	@FindBy(how=How.ID,using="js-topic-master")
+	WebElement My_Questions_topic_dropdown;
 	
 	WebDriver driver;
-	String Pool_name="Automation Testing1";
+	String Pool_name="Automation Testing5";
 	String Question_Type="MCQ";
 	String difficulty_level="Basic";
-	String Assessment_name="Automation_Testing_Team";
+	String Assessment_name="Automation_Testing_Team3";
 	String Exam_Instruction="Automation Testing Instructions";
 	String Section_Name="Automation section";
 	String Section_Instruction="Automation_section_instruction";
-	String topic_name="Automation_Testing";
+	String topic_name="Automation_Testing4";
 	Screen s = new Screen();
 	Pattern fileInputTextBox = new Pattern("./Sikuli/pattern_images/FileTextBox.PNG");
 	Pattern openButton = new Pattern("/Sikuli/pattern_images/OpenButton.PNG");
@@ -147,6 +173,7 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@Test
 	public void Manage_pools() throws Exception
 	{
+		logger=extent.createTest("Manage_pools");
 		try
 		{
 		Thread.sleep(2000);
@@ -176,10 +203,11 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@Test
 	public void Manage_Questions() throws Exception
 	{
+		logger=extent.createTest("Manage_Questions");
 		try
 		{
-		Thread.sleep(2000);
-		Manage_assessment.click();
+		//Thread.sleep(2000);
+		//Manage_assessment.click();
 		Thread.sleep(2000);
 		Manage_Questions.click();
 		Thread.sleep(1000);
@@ -196,6 +224,25 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 		s.click(openButton);
 		Thread.sleep(3000);
 		Browse_Excel_File_Upload_Question_Button.click();
+		
+		//My-Questions
+		Thread.sleep(2000);
+		My_Questions.click();
+		Thread.sleep(3000);
+		My_Questions_Edit_Button.click();
+		Thread.sleep(3000);
+		My_Questions_Edit_Button_Update_Question.click();
+		Thread.sleep(3000);
+		My_Questions_Preview_Button.click();
+		Thread.sleep(3000);
+		My_Questions_Preview_Button_Modal_close.click();
+		Thread.sleep(1000);
+		My_Questions_pool_dropdown.sendKeys(Pool_name);
+		My_Questions_pool_dropdown.sendKeys(Keys.ENTER);
+		Thread.sleep(1000);
+		My_Questions_topic_dropdown.sendKeys(topic_name);
+		My_Questions_topic_dropdown.sendKeys(Keys.ENTER);
+		
 		}
 		catch(Exception e)
 		{
@@ -206,10 +253,11 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 	@Test
 	public void MYOT_Exam_Duration() throws Exception
 	{
+		logger=extent.createTest("MYOT_Exam_Duration");
 		try
 		{
-			Thread.sleep(2000);
-			Manage_assessment.click();
+			//Thread.sleep(2000);
+			//Manage_assessment.click();
 			Thread.sleep(2000);
 			Myot.click();
 			Thread.sleep(1000);
@@ -228,6 +276,8 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 			Create_New_Assessment_Enable_Negative_Mark.click();
 			Thread.sleep(1000);
 			Create_New_Assessment_Exam_Instruction.sendKeys(Exam_Instruction);
+			Thread.sleep(1000);
+			Create_New_Assessment_Enable_Feedback.click();
 			Thread.sleep(1000);
 			Create_New_Assessment_Submit_Button.click();
 			//second page
@@ -263,6 +313,8 @@ public class Company_Pro_Manage_Assess_Page extends Driver_Class
 			Create_New_Assessment_Fourth_Page_Save_proceed_Button.click();
 			
 			//fifth page
+			Thread.sleep(3000);
+			Create_New_Assessment_Score_Dusplay.click();
 			Thread.sleep(3000);
 			Create_New_Assessment_Fifth_Page_Save_proceed_Button.click();
 			Thread.sleep(2000);

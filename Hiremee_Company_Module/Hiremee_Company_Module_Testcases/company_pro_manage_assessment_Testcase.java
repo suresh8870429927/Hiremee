@@ -20,8 +20,8 @@ public class company_pro_manage_assessment_Testcase
 		obj_Company_Pro_Manage_Assess_Page=new Company_Pro_Manage_Assess_Page(driver);
 		try
 		{
-			//obj_Company_Pro_Manage_Assess_Page.Manage_pools();
-			//obj_Company_Pro_Manage_Assess_Page.Manage_Questions();
+			obj_Company_Pro_Manage_Assess_Page.Manage_pools();
+			obj_Company_Pro_Manage_Assess_Page.Manage_Questions();
 			obj_Company_Pro_Manage_Assess_Page.MYOT_Exam_Duration();
 			
 		}

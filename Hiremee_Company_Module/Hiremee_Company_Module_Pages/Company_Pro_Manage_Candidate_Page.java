@@ -52,11 +52,12 @@ public class Company_Pro_Manage_Candidate_Page extends Driver_Class
 	{
 		try
 		{
-			Thread.sleep(2000);
-			Manage_Candidate.click();
-			Thread.sleep(2000);
-			Manage_Candidate_Invites_Pending.click();
+			//Thread.sleep(2000);
+			//Manage_Candidate.click();
+			//Thread.sleep(2000);
+			//Manage_Candidate_Invites_Pending.click();
 			Thread.sleep(1000);
+			/*
 			Manage_Candidate_Invites_Pending_Compose_Message_Button.click();
 			Thread.sleep(1000);
 			Manage_Candidate_Invites_Pending_Compose_Message_Custom_Message.sendKeys(Compose_Message);
@@ -64,9 +65,9 @@ public class Company_Pro_Manage_Candidate_Page extends Driver_Class
 			Manage_Candidate_Invites_Pending_Compose_Message_Send_Button.click();
 			Thread.sleep(1000);
 			Manage_Candidate_Invites_Pendind_Success_Message.click();
-			Thread.sleep(3000);
+			*/
 			//Manage_Candidate_Invites_Pending_Check_Box.click();
-			for(int i=0;i<=19;i++)
+			for(int i=0;i<=20;i++)
 			{
 			JavascriptExecutor js = (JavascriptExecutor) driver;  
 			js.executeScript("arguments[0].click();", Manage_Candidate_Invites_Pending_Check_Box);

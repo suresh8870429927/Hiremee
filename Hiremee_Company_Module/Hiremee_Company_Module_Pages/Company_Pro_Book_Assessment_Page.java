@@ -51,7 +51,7 @@ public class Company_Pro_Book_Assessment_Page extends Driver_Class
 	
 
 	WebDriver driver;
-	String Asessment_name="Automation_Testing_Team";
+	String Asessment_name="Automation_Testing_Team3";
 	public Company_Pro_Book_Assessment_Page(WebDriver ldriver)
 	{
 		this.driver=ldriver;

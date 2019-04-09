@@ -1,12 +1,16 @@
 package Driver_Started_Receruiter_Module;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -67,10 +71,18 @@ public class Recruiter_Driver_Class {
 	@BeforeTest
 	public void Start_driver() throws Exception
 	{
-		
+
 		//WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		//driver = new ChromeDriver();
+
+		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setPlatform(Platform.WINDOWS);
+		URL url=new URL("http://172.18.1.34:31154/wd/hub");
+		driver=new RemoteWebDriver(url, cap);
+		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -86,11 +98,11 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 
 	}
-	
+
 	@Test(priority=1)
 	public void Recruiter_dashboard_Testcase() throws Exception
 	{
@@ -101,11 +113,11 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
-	
+
 	@Test(priority=2)
 	public void Recreuiter_Post_a_job_Testcase() throws Exception
 	{
@@ -116,11 +128,11 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=3)
 	public void Recruiter_Search_Candidate_Testcase() throws Exception
 	{
@@ -132,7 +144,7 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -147,10 +159,10 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
-	
+
 	@Test(priority=5)
 	public void Recruiter_All_shortlisted_candidate_Testcase() throws Exception
 	{
@@ -162,10 +174,10 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
-	
+
 	@Test(priority=6)
 	public void Recruiter_changepassword_Testcase() throws Exception
 	{
@@ -176,12 +188,12 @@ public class Recruiter_Driver_Class {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
-		
+
 	}
 
-	
+
 	@Test(priority=7)
 	public void Recruiter_feedback_TestCase() throws Exception
 	{
@@ -193,7 +205,7 @@ public class Recruiter_Driver_Class {
 		}
 		catch (Exception e) 
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 

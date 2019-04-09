@@ -2,14 +2,18 @@ package Driver_Started_Candidate_Module;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -55,7 +59,7 @@ public class Candidate_Driver_Class {
 	candidate_invite_friends_Testcase obj_candidate_invite_friends_Testcase;
 	candidate_change_password_Testcase obj_candidate_change_password_Testcase;
 	candidate_feedback_and_logout_Testcase obj_candidate_feedback_and_logout_Testcase;
-	
+
 	public static ExtentHtmlReporter smoke_testing;
 	public static ExtentReports extent;
 	public static ExtentTest logger;
@@ -82,8 +86,17 @@ public class Candidate_Driver_Class {
 	public void Start_driver() throws Exception
 	{
 		//WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		//driver = new ChromeDriver();
+
+		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setPlatform(Platform.WINDOWS);
+		URL url=new URL("http://172.18.1.34:31154/wd/hub");
+		driver=new RemoteWebDriver(url, cap);
+		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -92,7 +105,7 @@ public class Candidate_Driver_Class {
 	@Test(priority=0)
 	public void Candidate_Assessment_Exam_Center_Testcase() throws Exception
 	{
-		
+
 		obj_candidate_pooled_campus_registration_Testcase =new candidate_pooled_campus_registration_Testcase(driver);
 		try 
 		{
@@ -103,7 +116,7 @@ public class Candidate_Driver_Class {
 			//throw(e);
 		}
 	}
-			
+
 	@Test(priority=1)
 	public void Candidate_pooled_campus_registration_Testcase() throws Exception
 	{
@@ -115,10 +128,10 @@ public class Candidate_Driver_Class {
 		catch (Exception e) 
 		{
 			//throw(e);
-			
+
 		}
 	}
-	
+
 	@Test(priority=2)
 	public void Candidate_Assessment_Usermapping_Testcase() throws Exception
 	{
@@ -126,15 +139,15 @@ public class Candidate_Driver_Class {
 		try
 		{
 			obj_candidate_pooled_campus_registration_Testcase.Candidate_Assessment_user_mapping();
-			
+
 		}
 		catch (Exception e) 
 		{
 			//throw(e);
-			
+
 		}
 	}
-	
+
 	@Test(priority=3)
 	public void Candidate_Assessment_Exam_Testcase() throws Exception
 	{
@@ -146,7 +159,7 @@ public class Candidate_Driver_Class {
 		catch (Exception e) 
 		{
 			//throw(e);
-			
+
 		}
 	}
 
@@ -340,11 +353,11 @@ public class Candidate_Driver_Class {
 	{
 		driver.quit();
 		try {
-	          FileUtils.deleteDirectory(new File("C:\\Users\\SURV2E~1\\AppData\\Local\\Temp"));
-	       }
-	      catch(IOException e) {
-	         System.err.println("An IOException was caught by Arunn :"+e.getMessage());
-	         }
+			FileUtils.deleteDirectory(new File("C:\\Users\\SURV2E~1\\AppData\\Local\\Temp"));
+		}
+		catch(IOException e) {
+			System.err.println("An IOException was caught by Arunn :"+e.getMessage());
+		}
 
 	}
 	@AfterSuite()
@@ -372,7 +385,7 @@ public class Candidate_Driver_Class {
 		email.attach(attachment);
 		email.send();
 		System.out.println("Mail Send Sucessfully");
-		 
+
 	}
 
 	public static void ExplicitWait(WebDriver driver,WebElement locater) throws Exception

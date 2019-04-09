@@ -1,11 +1,14 @@
 package Hiremee_Company_Module_Pages;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.JOptionPane;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import Driver_Started_Company_Module.Driver_Class;
 import Excel_Sheet_config.Excel_Sheet;
@@ -25,7 +28,7 @@ public class Company_login_page extends Driver_Class
 	WebElement Company_Login_Submit;
 
 	WebDriver driver;
-	public static String url_hiremee_company_login;
+	String url_hiremee_company_login;
 	String company_login_captcha;
 	String company_Email;
 	String company_Password="Temp!123";
@@ -35,7 +38,6 @@ public class Company_login_page extends Driver_Class
 	{
 		this.driver=l1driver;
 		PageFactory.initElements(driver,this);
-
 	}
 
 	@Test
@@ -46,7 +48,9 @@ public class Company_login_page extends Driver_Class
 		{
 			//company-login
 			url_hiremee_company_login=excel.Read_data(3, 54, 11);
+			System.out.println("1");
 			driver.get(url_hiremee_company_login);
+			System.out.println("2");
 			excel.Write_data_pass(3, 54, 12);
 			company_Email=excel.Read_data(3, 56, 11);
 			//Company_Email_ID.sendKeys(Comapany_Registration_Page.company_Email);

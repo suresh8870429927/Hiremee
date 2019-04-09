@@ -2,15 +2,19 @@ package Driver_Started_College_Module;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -50,7 +54,7 @@ public class College_Driver_Class
 	college_assessment_scores_Testcase obj_college_assessment_scores_Testcase;
 	college_change_password_Testcase obj_college_change_password_Testcase;
 	college_feedback_Tescase obj_college_feedback_Tescase;
-	
+
 	public static ExtentHtmlReporter smoke_testing;
 	public static ExtentReports extent;
 	public static ExtentTest logger;
@@ -78,8 +82,17 @@ public class College_Driver_Class
 	public void Start_driver() throws Exception
 	{
 		//WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		//driver = new ChromeDriver();
+
+		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setPlatform(Platform.WINDOWS);
+		URL url=new URL("http://172.18.1.34:31154/wd/hub");
+		driver=new RemoteWebDriver(url, cap);
+		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -98,15 +111,15 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=1)
 	public void College_login_Testcase() throws Exception
 	{
 		obj_college_login_Testcase =new college_login_Testcase(driver);
 		try 
 		{
-			
+
 			obj_college_login_Testcase.college_login_Testcases();
 		}
 		catch (Exception e) 
@@ -115,7 +128,7 @@ public class College_Driver_Class
 		}
 
 	}
-	
+
 	@Test(priority=2)
 	public void College_Dashboard_Testcase() throws Exception 
 	{
@@ -129,8 +142,8 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=3)
 	public void College_profile_Testcase() throws Exception
 	{
@@ -144,8 +157,8 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=4)
 	public void College_upload_student_details_Testcase() throws Exception
 	{
@@ -157,18 +170,18 @@ public class College_Driver_Class
 		catch (Exception e) 
 		{
 			//throw(e);
-			
+
 		}
 	}
-	
-	
+
+
 	@Test(priority=5)
 	public void college_Assessment_Exam_Center_creation() throws Exception
 	{
 		obj_college_registered_students_details_Testcase =new college_registered_students_details_Testcase(driver);
 		try
 		{
-			
+
 			obj_college_registered_students_details_Testcase.College_candidate_assessment_exam_center_Testcase();
 		}
 		catch(Exception e)
@@ -176,15 +189,15 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=6)
 	public void college_Assessment_Exam_Halticket_Update() throws Exception
 	{
 		obj_college_registered_students_details_Testcase =new college_registered_students_details_Testcase(driver);
 		try
 		{
-			
+
 			obj_college_registered_students_details_Testcase.college_candidate_halticket_update_Testcase();
 		}
 		catch(Exception e)
@@ -192,14 +205,14 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
+
 	@Test(priority=7)
 	public void college_Assessment_Exam_Candidate() throws Exception
 	{
 		obj_college_registered_students_details_Testcase =new college_registered_students_details_Testcase(driver);
 		try
 		{
-			
+
 			obj_college_registered_students_details_Testcase.College_candidate_Assessment_exam_Testcase();
 		}
 		catch(Exception e)
@@ -207,8 +220,8 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
-	
+
+
 	@Test(priority=8)
 	public void College_registered_students_details_Testcase() throws Exception
 	{
@@ -222,7 +235,7 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
+
 	@Test(priority=9)
 	public void College_assessment_scores_Testcase() throws Exception
 	{
@@ -237,7 +250,7 @@ public class College_Driver_Class
 			//throw(e);
 		}
 	}
-	
+
 	@Test(priority=10)
 	public void College_Change_password_Testcase() throws Exception
 	{
@@ -286,7 +299,7 @@ public class College_Driver_Class
 		}
 
 	}
-	
+
 	@AfterTest
 	public void driver_close()
 	{

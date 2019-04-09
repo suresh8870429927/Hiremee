@@ -2,15 +2,19 @@ package Driver_Started_Company_Module;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -83,9 +87,18 @@ public class Driver_Class
 	@BeforeTest
 	public void Start_driver() throws Exception
 	{
-		//WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
+	
+		/*
+		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setPlatform(Platform.WINDOWS);
+		URL url=new URL("http://172.18.1.34:31154/wd/hub");
+		driver=new RemoteWebDriver(url, cap);
+		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		 */
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -214,7 +227,7 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-
+*/
 	@Test(priority=8)
 	public void Manage_Assessment() throws Exception
 	{
@@ -244,7 +257,7 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-	 */
+	 
 
 	@Test(priority=10)
 	public void Manage_Candidate_Testcases() throws Exception
