@@ -25,7 +25,7 @@ public class Exam_Duration_Assessment_Testcase
 	}
 	
 	@Test
-	public void Exam_Duration_Assessment_Test()
+	public void Exam_Duration_Assessment_Test() throws Exception
 	{
 		obj_Exam_Duration_Assessment_Pages=new Exam_Duration_Assessment_Pages(driver);
 		try
@@ -34,7 +34,7 @@ public class Exam_Duration_Assessment_Testcase
 		}
 		catch(Exception e)
 		{
-			
+			throw(e);
 		}
 		
 	}
