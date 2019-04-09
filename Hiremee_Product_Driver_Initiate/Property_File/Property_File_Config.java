@@ -130,7 +130,14 @@ public class Property_File_Config
 		return Hiremee_Home;
 	}
 
-
+	//testng_result_xml url
+	public String getxmlpath()
+	{
+		String Testng_xml_file_path=pro.getProperty("xml_path");
+		return Testng_xml_file_path;
+		
+	}
+	
 
 
 }

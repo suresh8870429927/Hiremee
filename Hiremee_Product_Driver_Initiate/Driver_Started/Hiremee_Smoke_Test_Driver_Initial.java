@@ -75,6 +75,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 	Hiremee_cms_Testcase obj_Hiremee_cms_Testcase;
 	Hiremee_pro_Testcase obj_Hiremee_pro_Testcase;
 
+	
 	public static ExtentHtmlReporter smoke_testing;
 	public static ExtentReports extent;
 	public static ExtentTest logger;
@@ -129,7 +130,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}
 	}
-
+/*
 	@Test(priority=1)
 	public void Hiremee_Automation_candidate_module_login_page() throws Exception
 	{
@@ -1348,7 +1349,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 	}
 	 */
-	
+	/*
 	//cms page
 	@Test(priority=94)
 	public void Hiremee_Cms_Home_Testcase() throws Exception 
@@ -1968,7 +1969,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 			throw(e);
 		}
 	}
-	 
+	 */
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception
 	{
@@ -1995,136 +1996,107 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		Reporter.log(">=============================Hiremee_Project_Driver_End=====================================<",true);
 	}
 	@AfterSuite()
-	public void teardown() throws Exception
-	{
-		extent.flush();
-		Thread.sleep(5000);
-		//Count  for pass or fail of skip
-		File xmlFile = new File("D:\\automation\\Hiremee_Product_UAT__smoke_Testing_clone\\test-output\\testng-results.xml");
-		DocumentBuilderFactory docbuildFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder docBuilder = docbuildFactory.newDocumentBuilder();
-		Document document = docBuilder.parse(xmlFile);
-		document.getDocumentElement().normalize();
-		NodeList nodeList1 = document.getElementsByTagName("suite");
-		for (int i = 0; i < nodeList1.getLength(); i++) {
+    public void teardown() throws Exception
+    {
+        extent.flush();
+        //Count  for pass or fail of skip
+        config=new Property_File_Config();
+        File xmlFile = new File(config.getxmlpath());
+        System.out.println("test1");
+        DocumentBuilderFactory docbuildFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docbuildFactory.newDocumentBuilder();
+        Document document = docBuilder.parse(xmlFile);
+        document.getDocumentElement().normalize();
+        NodeList nodeList1 = document.getElementsByTagName("suite");
+        for (int i = 0; i < nodeList1.getLength(); i++) {
 
-			Node node = nodeList1.item(i);
-			if (node.getNodeType() == Node.ELEMENT_NODE) {
+            Node node = nodeList1.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
 
-				Element element = (Element) node;
-				Start_Date=element.getAttribute("started-at");
-				End_Date=element.getAttribute("finished-at");
-			}
-		}
-		NodeList nodeList = document.getElementsByTagName("testng-results");
-		for (int i = 0; i < nodeList.getLength(); i++) {
+                Element element = (Element) node;
+                Start_Date=element.getAttribute("started-at");
+                End_Date=element.getAttribute("finished-at");
+            }
+        }
+        NodeList nodeList = document.getElementsByTagName("testng-results");
+        for (int i = 0; i < nodeList.getLength(); i++) {
 
-			Node node = nodeList.item(i);
-			if (node.getNodeType() == Node.ELEMENT_NODE) {
+            Node node = nodeList.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
 
-				Element element = (Element) node;
-				Pass=element.getAttribute("passed");
-				Fail=element.getAttribute("failed");
-				Skip=element.getAttribute("skipped");
-				Total=String.valueOf((Integer.parseInt(Pass)+Integer.parseInt(Fail))+Integer.parseInt(Skip));
-			}
-		}
-
-		// Create object of Property file
-		ZipUtil.pack(new File("./test-output/"), new File("./test-output.zip"));
-		
-		//mail attachement
-		EmailAttachment attachment = new EmailAttachment();
-		attachment.setPath("./test-output.zip");
+                Element element = (Element) node;
+                Pass=element.getAttribute("passed");
+                Fail=element.getAttribute("failed");
+                Skip=element.getAttribute("skipped");
+ Total=String.valueOf((Integer.parseInt(Pass)+Integer.parseInt(Fail))+Integer.parseInt(Skip));
+            }
+        }
+        // Create object of Property file
+        //ZipUtil.pack(new File("./test-output/"), new File("./HireMee_Pro_Smoke_Report.zip"));
+        ImageHtmlEmail email = new ImageHtmlEmail();
+        String htmlEmailTemplate = ( //"<img src=\"http://172.18.1.87:81/assets/home/images/hiremee-logo.png\"> "+
+                "            <center > <table width=\"600\" style=\"width:600px\">\r\n" +
+                "            <tbody>\r\n" +
+                "                <tr height=\"101\" style=\"padding-top:24px;padding-bottom:24px\">\r\n" +
+                "                    <td width=\"50%\" style=\"width:50%;padding:0\"><img src=\"http://172.18.1.87:81/assets/home/images/hiremee-logo.png\"\r\n" +
+                "                            alt=\"HirMee\" /></td>\r\n" +
+                "                    <td width=\"50%\" valign=\"middle\" style=\"width:50%;vertical-align:middle;padding:0\">\r\n" +
+                "                        <h2 style=\"margin:0;font-size:18px;color:#04a0dc;text-align:right\">Test Suite Execution Report</h2>\r\n" +
+                "                    </td>\r\n" +
+                "                </tr>\r\n" +
+                "                <tr style=\"background-color:#fff;align=center\">\r\n" +
+                "                    <td style=\"border:1px solid #dddee1;padding:24px;word-break:break-word;word-wrap:break-word\" colspan=\"2\">\r\n" +
+                "                       <p>Dear Team,<br><br>HireMee Smoke test suite has been scuessfully Completed . Here is the summary report.</p>\r\n" +
+                "                        <table class=\"border\" width=\"400\" border=\"1\" bgcolor=\"#f5f7fa\" style=\"width:100%;background-color:#f5f7fa;border:1px solid #dddee1\">\r\n" +
+                "                            <tbody>\r\n" +
+                "                            <tr>\r\n" +
+                "                                <tr> <td colspan=\"8\" align=\"center\">Automation_Testing_Report</td></tr>\r\n"+
+                "                                <tr> <td>Project Name</td>"+"<td colspan=\"8\">"+"HireMee Pro Web"+"</td></tr>\r\n"+
+                "                                <tr> <td>Test Suite</td>"+"<td colspan=\"8\">"+"Smoke_Test"+"</td></tr>\r\n"+
+                "                                <tr> <td>Browser</td>"+"<td colspan=\"8\">"+"Chrome_Browser"+"</td></tr>\r\n"+
+               // "                                <tr> <td>Started Date</td>"+"<td colspan=\"8\">"+Start_Date+"</td></tr>\r\n"+
+                "                               <tr> <td>Started Date</td>"+"<td colspan=\"8\">"+Start_Date+"</td></tr>\r\n"+
+                "                                <tr> <td>End Date</td>"+"<td colspan=\"8\">"+End_Date+"</td></tr>\r\n"+
+               // "                                <tr> <td>Total Duration</td>"+"<td colspan=\"8\">"+Start_Date+"</td></tr>\r\n"+
+                "                                <tr> <td width=\"20%\">Result</td>"+"<td width=\"10%\" style=\"color:Green\">Pass : "+Pass+"</td>" +
+                "                                <td width=\"10%\" style=\"color:red\">Fail : "+Fail+"</td>"+
+                "                                <td width=\"10%\" style=\"color:blue\">Skip : "+Skip+"</td>" +
+                "                                <td width=\"10%\" style=\"color:blue\">Total : "+Total+"</td></tr>\r\n" +
+                "                                </tr>\r\n" +
+                "                            </tbody>\r\n" +
+                "                        </table>\r\n" +
+                "                        <p>Kindly find the below attachement for your Reference \r\n" +
+                "                        <br>\r\n" +
+                "                        <br>This email was sent automatically by Automation Team. Please do not reply.<br><br>Thanks,<br>Automation Team</p>\r\n" +
+                "                    </td>\r\n" +
+                "                </tr>\r\n" +
+                "            </tbody>\r\n" +
+                "        </table>\r\n" +
+                "    </center>");
+        URL url = new URL("http://172.18.1.87:81/");
+        email.setDataSourceResolver(new DataSourceUrlResolver(url));
+        email.setHostName("mail.veetechnologies.com");
+        email.setSmtpPort(25);
+        email.setAuthenticator(new DefaultAuthenticator("irudayaraj.n@veetechnologies.com", "Geri%9r%rREw"));
+        email.setSSLOnConnect(true);
+        email.setFrom("irudayaraj.n@veetechnologies.com");
+        email.setSubject("HireMee_mail _Pro_UAT_Smoke_Testing_Extent_Report");
+        email.addTo("irudayaraj.n@veetechnologies.com");
+        email.addCc("suresh.k@veetechnologies.com");
+        email.addCc("arunkumar.a@veetechnologies.com");
+        //email.addCc("udhayakumar.n@veetechnologies.com");
+        //email.addCc("senthilkumar.t@veetechnologies.com");
+        //mail attachement
+        EmailAttachment attachment = new EmailAttachment();
+        //attachment.setPath("./HireMee_Pro_Smoke_Report.zip");
+        attachment.setPath("./Reports/Hiremee_Smoke_Testing_ExtentReport.html");
 		attachment.setDisposition(EmailAttachment.ATTACHMENT);
-		attachment.setDescription("Please find the Attachement for live Smoke Execution");
-		attachment.setName("Hiremee_Extent_Report");
-
-		ImageHtmlEmail email = new ImageHtmlEmail();
-		String htmlEmailTemplate = ".... <img src=\"http://172.18.1.87:81/assets/home/images/hiremee-logo.png\"> ...."
-				+"<style>\r\n" + 
-				"body{\r\n" + 
-				"    background-color: white;\r\n" + 
-				"}\r\n" + 
-				".gems {\r\n" + 
-				"    margin:0 8px; \r\n" + 
-				"    padding:0; \r\n" + 
-				"}\r\n" + 
-				".gems table{\r\n" + 
-				"    width:100%;\r\n" + 
-				"    background-color:white;\r\n" + 
-				"}\r\n" + 
-				".gems td {\r\n" + 
-				"    padding:0px 1px; \r\n" + 
-				"    margin:0;\r\n" + 
-				"}\r\n" + 
-				".gems tr.filelist {\r\n" + 
-				"    margin:5px;\r\n" + 
-				"    background-color: lightgrey;\r\n" + 
-				"}\r\n" + 
-				".gems tr.tools {\r\n" + 
-				"    background-color: lightgrey;\r\n" + 
-				"}\r\n" + 
-				"\r\n" + 
-				"div.textarea  {\r\n" + 
-				"    background-color: white;\r\n" + 
-				"}\r\n" + 
-				"\r\n" + 
-				"</style>\r\n" + 
-				"<body>"
-				+ "<table width=\"500\" border=\"1\" align=\"center\">\r\n" + 
-				"<tbody bgcolor=\"grey\"><tr>\r\n" + 
-				"<td colspan=\"2\" align=\"center\">Automation_Testing_Report</td>\r\n"+
-				"<tbody><tr>\r\n" + 
-				"<td>Project Name</td><td>Hiremee Product</td>\r\n"+
-				"<tbody><tr>\r\n" + 
-				"<td>Started Date</td><td>"+Start_Date+"</td>\r\n" + 
-				"</tr>\r\n" + 
-				"<td>End Date:</td><td>"+End_Date+"</td>\r\n" + 
-				"</tr>\r\n" +
-				"<td>Tests passed</td><td style=\"color:green\">"+Pass+"</td>\r\n" + 
-				"</tr><tr>\r\n" + 
-				"<td>Tests Failed</td><td style=\"color:red\">"+Fail+"</td>\r\n" + 
-				"</tr><tr>\r\n" + 
-				"<td>Tests Skipped</td><td style=\"color:lightyellow\">"+Skip+"</td>\r\n" + 
-				"</tr><tr>\r\n" + 
-				"<tr><td>Total Duration</td><td style=\"color:black\">"+Total+"</td>\r\n" + 
-				"</tr><tr>\r\n" + 
-				"</tbody></table>"+
-				"</body>"
-				;
-		URL url = new URL("http://172.18.1.87:81/");
-		email.setDataSourceResolver(new DataSourceUrlResolver(url));
-		email.setHostName("mail.veetechnologies.com");
-		email.setSmtpPort(25);
-		email.setAuthenticator(new DefaultAuthenticator("irudayaraj.n@veetechnologies.com", "Geri%9r%rREw"));
-		email.setSSLOnConnect(true);
-		email.setFrom("irudayaraj.n@veetechnologies.com");
-		//email1.setSubject("HireMee_Pro_UAT_Smoke_Testing_Extent_Report");
-		//email1.setMsg("Please find the Attachement For Hiremee Pro 9.0 Company_pro Smoke Testing Report");
-		email.addTo("irudayaraj.n@veetechnologies.com");
-		email.addCc("suresh.k@veetechnologies.com");
-		email.addCc("arunkumar.a@veetechnologies.com");
-		//email.addCc("udhayakumar.n@veetechnologies.com");
-		//email.addCc("senthilkumar.t@veetechnologies.com");
-		MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-		
-		// Mention the file which you want to send
-		String filename = "./test-output.zip";
-		// Create data source and pass the filename
-		DataSource source = new FileDataSource(filename);
-		// set the handler
-		messageBodyPart2.setDataHandler(new DataHandler(source));
-		// set the file
-		messageBodyPart2.setFileName(filename);
-		Multipart multipart = new MimeMultipart();
-		multipart.addBodyPart(messageBodyPart2);
-		
-		email.attach(attachment);
-		email.setHtmlMsg(htmlEmailTemplate);
-		//email.send();
-		System.out.println("Mail Send Sucessfully");
-	}
+        email.attach(attachment);
+        email.setHtmlMsg(htmlEmailTemplate);
+        email.send();
+        System.out.println("Mail Send Sucessfully");
+    } 
+	
 
 	public static void ExplicitWait(WebDriver driver,WebElement locater) throws Exception
 	{	
