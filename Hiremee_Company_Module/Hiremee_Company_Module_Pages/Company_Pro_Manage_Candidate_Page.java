@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import Driver_Started_Company_Module.Driver_Class;
+import Excel_Sheet_config.Excel_Sheet;
 
 public class Company_Pro_Manage_Candidate_Page extends Driver_Class
 {
@@ -41,7 +42,8 @@ public class Company_Pro_Manage_Candidate_Page extends Driver_Class
 	
 	WebDriver driver;
 	String Testpins[]=new String[19];
-	String Compose_Message="Automation Message";
+	String Compose_Message;
+	Excel_Sheet excel=new Excel_Sheet();
 	public Company_Pro_Manage_Candidate_Page(WebDriver ldriver)
 	{
 		this.driver=ldriver;
@@ -72,22 +74,47 @@ public class Company_Pro_Manage_Candidate_Page extends Driver_Class
 			JavascriptExecutor js = (JavascriptExecutor) driver;  
 			js.executeScript("arguments[0].click();", Manage_Candidate_Invites_Pending_Check_Box);
 			Thread.sleep(2000);
+			excel.Write_data_pass(3, 589, 12);
 			Testpins[i]=Manage_Candidate_Invites_Pending_Test_Pin.getText();
+			excel.Write_data_pass(3, 590, 12);
 			Thread.sleep(1000);
 			Manage_Candidate_Invites_Pending_Compose_Message_Button.click();
+			excel.Write_data_pass(3, 592, 12);
+			excel.Write_data_pass(3, 594, 12);
+			excel.Write_data_pass(3, 596, 12);
+			excel.Write_data_pass(3, 598, 12);
 			Thread.sleep(1000);
+			Compose_Message=excel.Read_data(3, 600, 11);
 			Manage_Candidate_Invites_Pending_Compose_Message_Custom_Message.sendKeys(Compose_Message);
+			excel.Write_data_pass(3, 600, 12);
 			Thread.sleep(1000);
 			Manage_Candidate_Invites_Pending_Compose_Message_Send_Button.click();
+			excel.Write_data_pass(3, 602, 12);
 			Thread.sleep(1000);
 			Manage_Candidate_Invites_Pendind_Success_Message.click();
+			excel.Write_data_pass(3, 604, 12);
+			excel.Write_data_pass(3, 606, 12);
 			Thread.sleep(3000);
 			Manage_Candidate_Invites_Pending_Compose_Message_Button_close_button.click();
+			excel.Write_data_pass(3, 608, 12);
+			excel.Write_data_pass(3, 610, 12);
 			System.out.println(Testpins[i]);
 			}
 		}
 		catch(Exception e)
 		{
+			excel.Write_data_fail(3, 589, 12);
+			excel.Write_data_fail(3, 590, 12);
+			excel.Write_data_fail(3, 592, 12);
+			excel.Write_data_fail(3, 594, 12);
+			excel.Write_data_fail(3, 596, 12);
+			excel.Write_data_fail(3, 598, 12);
+			excel.Write_data_fail(3, 600, 12);
+			excel.Write_data_fail(3, 602, 12);
+			excel.Write_data_fail(3, 604, 12);
+			excel.Write_data_fail(3, 606, 12);
+			excel.Write_data_fail(3, 608, 12);
+			excel.Write_data_fail(3, 610, 12);
 			throw(e);
 		}
 	}

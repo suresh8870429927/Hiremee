@@ -2,19 +2,14 @@ package Driver_Started_Company_Module;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -45,12 +40,14 @@ import Hiremee_Company_Module_Testcases.company_feedback_TestCase;
 import Hiremee_Company_Module_Testcases.company_posted_a_job_Testcase;
 import Hiremee_Company_Module_Testcases.company_pro_manage_assessment_Testcase;
 import Hiremee_Company_Module_Testcases.company_pro_manage_book_assessment_Testcase;
+import Hiremee_Company_Module_Testcases.company_pro_upgrade_Testcase;
 import Hiremee_Company_Module_Testcases.company_recruiters_Testcase;
 
 public class Driver_Class 
 {
 	company_Registration_Testcase obj_company_registration_Testcase;
 	company_Login_Testcase obj_Company_Login_Testcase;
+	company_pro_upgrade_Testcase obj_company_pro_upgrade_Testcase;
 	company_dashboard_Testcase obj_company_dashboard_Testcase;
 	company_recruiters_Testcase obj_company_recruiters_Testcase;
 	company_Search_Candidate_Testcase obj_company_Search_Candidate_Testcase;
@@ -103,7 +100,7 @@ public class Driver_Class
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 	}
-	/*
+	
 	@Test(priority=0)
 	public void Company_Registration_Testcase() throws Exception
 	{
@@ -118,7 +115,7 @@ public class Driver_Class
 		}
 
 	}
-	 */
+	 
 	@Test(priority=1)
 	public void Company_Login_Testcase() throws Exception
 	{
@@ -132,8 +129,24 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-	/*
+	
 	@Test(priority=2)
+	public void company_pro_Testcases() throws Exception
+	{
+		obj_company_pro_upgrade_Testcase=new company_pro_upgrade_Testcase(driver);
+		try
+		{
+			obj_company_pro_upgrade_Testcase.company_pro_testcase();
+			
+		}
+		catch(Exception e)
+		{
+			throw(e);
+		}
+	}
+		
+	
+	@Test(priority=3)
 	public void Company_dashboard_Testcase() throws Exception
 	{
 		obj_company_dashboard_Testcase =new company_dashboard_Testcase(driver);
@@ -146,9 +159,8 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-	 */
-	/*
-	@Test(priority=3)
+	
+	@Test(priority=4)
 	public void Company_recruiters_Testcase() throws Exception
 	{
 		obj_company_recruiters_Testcase =new company_recruiters_Testcase(driver);
@@ -164,7 +176,7 @@ public class Driver_Class
 	}
 
 
-	@Test(priority=4)
+	@Test(priority=5)
 	public void Company_posted_a_job_Testcase() throws Exception
 	{
 		obj_company_posted_a_job_Testcase =new company_posted_a_job_Testcase(driver);
@@ -180,7 +192,7 @@ public class Driver_Class
 	}
 
 
-	@Test(priority=5)
+	@Test(priority=6)
 	public void Company_Search_Candidate_Testcase() throws Exception
 	{
 		obj_company_Search_Candidate_Testcase =new company_Search_Candidate_Testcase(driver);
@@ -196,7 +208,7 @@ public class Driver_Class
 	}
 
 
-	@Test(priority=6)
+	@Test(priority=7)
 	public void Company_email_template_Testcase() throws Exception
 	{
 		obj_company_email_template_Testcase =new company_email_template_Testcase(driver);
@@ -212,9 +224,9 @@ public class Driver_Class
 	}
 
 
-	@Test(priority=7)
+	@Test(priority=8)
 	public void Company_All_shortlisted_candidate_Testcase() throws Exception
-	{5
+	{
 
 		obj_company_All_shortlisted_candidate_Testcase =new company_All_shortlisted_candidate_Testcase(driver);
 		try 
@@ -227,8 +239,8 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-*/
-	@Test(priority=8)
+	
+	@Test(priority=9)
 	public void Manage_Assessment() throws Exception
 	{
 		obj_company_pro_manage_assessment_Testcase=new company_pro_manage_assessment_Testcase(driver);
@@ -243,7 +255,7 @@ public class Driver_Class
 
 	}
 
-	@Test(priority=9)
+	@Test(priority=10)
 	public void Manage_Book_Assessment() throws Exception
 	{
 		obj_company_pro_manage_book_assessment_Testcase=new company_pro_manage_book_assessment_Testcase(driver);
@@ -259,7 +271,7 @@ public class Driver_Class
 	}
 	 
 
-	@Test(priority=10)
+	@Test(priority=11)
 	public void Manage_Candidate_Testcases() throws Exception
 	{
 		obj_Company_Pro_Manage_Candidate_Testcase=new Company_Pro_Manage_Candidate_Testcase(driver);
@@ -273,8 +285,8 @@ public class Driver_Class
 		}
 	}
 
-	/*
-	@Test(priority=8)
+	
+	@Test(priority=12)
 	public void Company_change_password_Testcase() throws Exception
 	{
 		obj_company_change_password_Testcase=new company_change_password_Testcase(driver);
@@ -289,7 +301,7 @@ public class Driver_Class
 		}
 	}
 
-	@Test(priority=9)
+	@Test(priority=13)
 	public void Company_feedback_TestCase() throws Exception
 	{
 		obj_company_feedback_TestCase =new company_feedback_TestCase(driver);
@@ -303,7 +315,7 @@ public class Driver_Class
 			throw(e);
 		}
 	}
-	 */
+	 
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception
 	{

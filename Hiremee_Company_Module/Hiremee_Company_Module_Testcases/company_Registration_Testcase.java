@@ -24,6 +24,7 @@ public class company_Registration_Testcase{
 		
 		Obj_company_register.company_register_page();
 		//obj_company_registration_activate_ops_portal.company_registration_activate_ops_portal();
+		Obj_company_register.ops_portal_company_activation();
 		}
 		catch(Exception e)
 		{

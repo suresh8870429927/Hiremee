@@ -1,11 +1,17 @@
 package Hiremee_Company_Module_Pages;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Set;
+
 import javax.swing.JOptionPane;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
 import Driver_Started_Company_Module.Driver_Class;
 import Excel_Sheet_config.Excel_Sheet;
 
@@ -101,13 +107,18 @@ public class Comapany_Registration_Page  extends Driver_Class
 	static String company_Password;
 	String company_Website;
 	String company_spoc;
+	//ops portal
+	String hiremee_url_opsportal="http://172.18.1.87:82/";
+	String ops_portal_username="pjxraj@gmail.com";
+	String ops_portal_password="Temp@123";
+
 	Excel_Sheet excel=new Excel_Sheet();
 	public Comapany_Registration_Page(WebDriver ldriver)
 	{
 		this.driver=ldriver;
 		PageFactory.initElements(driver, this);
 	}
-
+	@Test
 	public void company_register_page() throws Exception 
 	{
 		logger = extent.createTest("company_register_page");
@@ -169,4 +180,87 @@ public class Comapany_Registration_Page  extends Driver_Class
 			throw(e);
 		}
 	}
+	@Test
+	public void ops_portal_company_activation() throws Exception
+	{
+		logger=extent.createTest("ops_portal_company_activation");
+		try
+		{
+			//ops approver company
+			String parent=driver.getWindowHandle();
+			Robot a=new Robot();
+			a.keyPress(KeyEvent.VK_CONTROL);
+			a.keyPress(KeyEvent.VK_T);
+			a.keyRelease(KeyEvent.VK_CONTROL);
+			a.keyRelease(KeyEvent.VK_T);
+			Thread.sleep(5000);
+			Set<String>s1=driver.getWindowHandles();
+			//int count=s1.size();
+			for(String child:s1) {
+				if(!parent.equalsIgnoreCase(child))
+				{
+					driver.switchTo().window(child);
+					Thread.sleep(5000);
+					driver.get(hiremee_url_opsportal);
+					//login-opsportal
+					Opsportal_email_id.sendKeys(ops_portal_username);
+					Opsportal_password.sendKeys(ops_portal_password);
+					//captcha
+					ops_portal_captcha=JOptionPane.showInputDialog("Enter the captcha value");
+					ops_captcha_value.sendKeys(ops_portal_captcha);
+					ops_login_submit.click();
+
+					//company activation
+					Thread.sleep(3000);
+					ops_company_details.click();
+					Thread.sleep(3000);
+					ops_company_activation_status.click();
+					driver.switchTo().alert().accept();
+					Thread.sleep(3000);
+					ops_company_Activation_notes.sendKeys("Automation Team");
+					Thread.sleep(3000);
+					ops_company_Activation_submit.click();
+					Thread.sleep(3000);
+					/*
+					ops_company_Edit.click();
+					Thread.sleep(3000);
+					ops_company_Search_per_day.clear();
+					ops_company_Search_per_day.sendKeys("1000");
+					Thread.sleep(3000);
+					ops_company_Number_of_Search.clear();
+					ops_company_Number_of_Search.sendKeys("1000");
+					Thread.sleep(3000);
+					ops_company_Number_of_selected.clear();
+					ops_company_Number_of_selected.sendKeys("1000");
+					Thread.sleep(3000);
+					ops_company_Search_per_month.clear();
+					ops_company_Search_per_month.sendKeys("1000");
+					Thread.sleep(3000);
+					ops_company_Selected_per_month.clear();
+					ops_company_Selected_per_month.sendKeys("1000");
+					Thread.sleep(3000);
+					ops_company_Number_of_record.clear();
+					ops_company_Number_of_record.sendKeys("2");
+					Thread.sleep(2000);
+					ops_company_Edit_update_button.click();
+					*/
+					driver.close();
+				}
+				driver.switchTo().window(parent);
+
+			}
+
+		}
+	catch(Exception e)
+	{
+		throw(e);
+
+	}
+
+}
+
+
+
+
+
 }
