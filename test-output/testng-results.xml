@@ -11,16 +11,16 @@
       <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10817" started-at="2019-04-09T11:04:22Z" finished-at="2019-04-09T11:04:33Z">
+  <suite name="Default suite" duration-ms="13134" started-at="2019-04-10T06:14:53Z" finished-at="2019-04-10T06:15:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10817" started-at="2019-04-09T11:04:22Z" finished-at="2019-04-09T11:04:33Z">
+    <test name="Default test" duration-ms="13134" started-at="2019-04-10T06:14:53Z" finished-at="2019-04-10T06:15:06Z">
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="startReport" is-config="true" duration-ms="364" started-at="2019-04-09T11:04:22Z" finished-at="2019-04-09T11:04:22Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="startReport" is-config="true" duration-ms="276" started-at="2019-04-10T06:14:53Z" finished-at="2019-04-10T06:14:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Start_driver" is-config="true" duration-ms="5555" started-at="2019-04-09T11:04:22Z" finished-at="2019-04-09T11:04:28Z">
+        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Start_driver" is-config="true" duration-ms="6310" started-at="2019-04-10T06:14:53Z" finished-at="2019-04-10T06:15:00Z">
           <reporter-output>
             <line>
               <![CDATA[>=============================Hiremee_Project_Driver_Initiated=====================================<]]>
@@ -30,11 +30,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- Start_driver -->
-        <test-method status="PASS" signature="Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Hiremee_Automation_candidate_module_Home_page" duration-ms="4513" started-at="2019-04-09T11:04:28Z" finished-at="2019-04-09T11:04:32Z">
+        <test-method status="PASS" signature="Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Hiremee_Automation_candidate_module_Home_page" duration-ms="5921" started-at="2019-04-10T06:15:00Z" finished-at="2019-04-10T06:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Hiremee_Automation_candidate_module_Home_page -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="getResult" is-config="true" duration-ms="14" started-at="2019-04-09T11:04:32Z" finished-at="2019-04-09T11:04:32Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="getResult" is-config="true" duration-ms="15" started-at="2019-04-10T06:15:06Z" finished-at="2019-04-10T06:15:06Z">
           <params>
             <param index="0">
               <value>
@@ -45,14 +45,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="driver_close" is-config="true" duration-ms="712" started-at="2019-04-09T11:04:32Z" finished-at="2019-04-09T11:04:33Z">
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="driver_close" is-config="true" duration-ms="868" started-at="2019-04-10T06:15:06Z" finished-at="2019-04-10T06:15:06Z">
           <reporter-output>
             <line>
               <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
             </line>
           </reporter-output>
         </test-method> <!-- driver_close -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="teardown" is-config="true" duration-ms="7286" started-at="2019-04-09T11:04:33Z" finished-at="2019-04-09T11:04:40Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="teardown" is-config="true" duration-ms="6327" started-at="2019-04-10T06:15:07Z" finished-at="2019-04-10T06:15:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

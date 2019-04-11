@@ -138,6 +138,15 @@ public class Property_File_Config
 		
 	}
 	
+	//Extent_Report_xml_File
+	public String getExtent_path()
+	{
+		String Extent_Report_Path=pro.getProperty("Report_extent_file");
+		return Extent_Report_Path;
+		
+	}
+	
+	
 
 
 }

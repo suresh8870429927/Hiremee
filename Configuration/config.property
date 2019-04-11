@@ -28,7 +28,10 @@ Assess_username=admin
 Assess_pass=Temp!123
 
 //Testng_Resilt_Xml File
-xml_path=D:\\automation\\Hiremee_Product_UAT__smoke_Testing\\test-output\\testng-results.xml
+xml_path=./test-output/testng-results.xml
 
+
+//Extent_Report
+Report_extent_file=/Reports/Hiremee_Smoke_Testing_ExtentReport.html
 
 

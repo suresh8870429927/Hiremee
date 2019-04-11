@@ -75,7 +75,6 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 	Hiremee_cms_Testcase obj_Hiremee_cms_Testcase;
 	Hiremee_pro_Testcase obj_Hiremee_pro_Testcase;
 
-	
 	public static ExtentHtmlReporter smoke_testing;
 	public static ExtentReports extent;
 	public static ExtentTest logger;
@@ -88,9 +87,9 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 	WebDriver driver;
 	WebDriverWait wait;
 	@BeforeSuite(alwaysRun=true)
-	public void startReport(){
-
-		smoke_testing = new ExtentHtmlReporter(System.getProperty("user.dir") +"/Reports/Hiremee_Smoke_Testing_ExtentReport.html");
+	public void startReport() throws Exception{
+		config=new Property_File_Config();
+		smoke_testing = new ExtentHtmlReporter(System.getProperty("user.dir") +config.getExtent_path());
 		extent = new ExtentReports ();
 		extent.attachReporter(smoke_testing);
 		extent.setSystemInfo("Host Name", "Smoke_Testing");
@@ -2002,7 +2001,6 @@ public class Hiremee_Smoke_Test_Driver_Initial {
         //Count  for pass or fail of skip
         config=new Property_File_Config();
         File xmlFile = new File(config.getxmlpath());
-        System.out.println("test1");
         DocumentBuilderFactory docbuildFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docbuildFactory.newDocumentBuilder();
         Document document = docBuilder.parse(xmlFile);
