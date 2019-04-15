@@ -108,6 +108,8 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 	@Test
 	public void Assessment_Home_Page() throws Exception
 	{
+		Testcase_ID=excel.Read_data(5, 19, 0);
+		Expected_Result=excel.Read_data(5, 19, 7);
 		logger = extent.createTest("Assessment_Home_Page");
 		try {
 			//Assessment_url=excel.Read_data(5, 19, 10);
@@ -124,6 +126,8 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 	@Test
 	public void Assessment_Login_Page() throws Exception
 	{
+		Testcase_ID=excel.Read_data(5, 21, 0);
+		Expected_Result=excel.Read_data(5, 21, 7);
 		logger = extent.createTest("Assessment_Home_Page");
 		try {
 			//admin_username=excel.Read_data(5, 20, 10);
@@ -146,7 +150,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 	}
 	@Test
 	public void Assessment_Exam_Center_master_Page() throws Exception
-	{	logger = extent.createTest("Assessment_Home_Page");
+	{	
+		Testcase_ID=excel.Read_data(5, 22, 0);
+		Expected_Result=excel.Read_data(5, 22, 7);
+		logger = extent.createTest("Assessment_Home_Page");
 		try {
 			ExplicitWait(driver, Admin_Exam_Center_Master);
 			Admin_Exam_Center_Master.click();
@@ -160,7 +167,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 	}
 	@Test
 	public void Assessment_Eassessment_Page() throws Exception
-	{	logger = extent.createTest("Assessment_Eassessment_Page");
+	{	
+		Testcase_ID=excel.Read_data(5, 23, 0);
+		Expected_Result=excel.Read_data(5, 23, 7);
+		logger = extent.createTest("Assessment_Eassessment_Page");
 		try {
 			ExplicitWait(driver, Admin_Eassessment);
 			Admin_Eassessment.click();
@@ -175,7 +185,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 
 	@Test
 	public void Assessment_Essessment_createexam_Page() throws Exception
-	{	logger = extent.createTest("Assessment_Essessment_createexam_Page");
+	{	
+		Testcase_ID=excel.Read_data(5, 24, 0);
+		Expected_Result=excel.Read_data(5, 24, 7);
+		logger = extent.createTest("Assessment_Essessment_createexam_Page");
 		try {
 			ExplicitWait(driver, Admin_Eassessment_create_exam);
 			Admin_Eassessment_create_exam.click();
@@ -189,7 +202,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 	}
 		@Test
 		public void Assessment_Essessment_candidate_Feedback_Page() throws Exception
-		{	logger = extent.createTest("Assessment_Essessment_candidate_Feedback_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 25, 0);
+			Expected_Result=excel.Read_data(5, 25, 7);
+			logger = extent.createTest("Assessment_Essessment_candidate_Feedback_Page");
 			try {
 				ExplicitWait(driver, Admin_Eassessment_Candidate_Feedback);
 				Admin_Eassessment_Candidate_Feedback.click();
@@ -204,7 +220,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_Reports_Page() throws Exception
-		{	logger = extent.createTest("Assessment_Reports_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 26, 0);
+			Expected_Result=excel.Read_data(5, 26, 7);
+			logger = extent.createTest("Assessment_Reports_Page");
 			try {
 				
 				Admin_Reports.click();
@@ -218,7 +237,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_overall_exam_Reports_Page() throws Exception
-		{	logger = extent.createTest("Assessment_overall_exam_Reports_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 27, 0);
+			Expected_Result=excel.Read_data(5, 27, 7);
+			logger = extent.createTest("Assessment_overall_exam_Reports_Page");
 			try {
 				Admin_overall_exam_Reports.click();
 				excel.Write_data_pass(5, 27, 11);
@@ -232,7 +254,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_userwise_exam_Reports_Page() throws Exception
-		{	logger = extent.createTest("Assessment_userwise_exam_Reports_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 28, 0);
+			Expected_Result=excel.Read_data(5, 28, 7);
+			logger = extent.createTest("Assessment_userwise_exam_Reports_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Reports.click();
@@ -249,7 +274,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_AI_Rejection_Reports_Page() throws Exception
-		{	logger = extent.createTest("Assessment_AI_Rejection_Reports_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 29, 0);
+			Expected_Result=excel.Read_data(5, 29, 7);
+			logger = extent.createTest("Assessment_AI_Rejection_Reports_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_AI_Assessment_Rejection_Reports.click();
@@ -264,7 +292,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_User_Management_Page() throws Exception
-		{	logger = extent.createTest("Assessment_User_Management_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 30, 0);
+			Expected_Result=excel.Read_data(5, 30, 7);
+			logger = extent.createTest("Assessment_User_Management_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Usermanagement.click();
@@ -278,7 +309,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_User_Management_usermapping_college_Page()throws Exception
-		{	logger = extent.createTest("Assessment_User_Management_usermapping_college_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 31, 0);
+			Expected_Result=excel.Read_data(5, 31, 7);
+			logger = extent.createTest("Assessment_User_Management_usermapping_college_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Usermanagement_usermapping_college.click();
@@ -292,7 +326,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_User_Management_usermapping_Pooled_Page()throws Exception
-		{	logger = extent.createTest("Assessment_User_Management_usermapping_Pooled_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 32, 0);
+			Expected_Result=excel.Read_data(5, 32, 7);
+			logger = extent.createTest("Assessment_User_Management_usermapping_Pooled_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Usermanagement_usermapping_Pooled.click();
@@ -306,7 +343,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_User_Management_hallticket_details_Page()throws Exception
-		{	logger = extent.createTest("Assessment_User_Management_hallticket_details_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 33, 0);
+			Expected_Result=excel.Read_data(5, 33, 7);
+			logger = extent.createTest("Assessment_User_Management_hallticket_details_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Usermanagement_HallTicket_Details.click();
@@ -320,7 +360,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_User_Management_Invigilater_Registration_Page()throws Exception
-		{	logger = extent.createTest("Assessment_User_Management_Invigilater_Registration_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 34, 0);
+			Expected_Result=excel.Read_data(5, 34, 7);
+			logger = extent.createTest("Assessment_User_Management_Invigilater_Registration_Page");
 			try {
 				Thread.sleep(3000);
 				Admin_Usermanagement_Invigilater_Registration.click();
@@ -335,7 +378,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 35, 0);
+			Expected_Result=excel.Read_data(5, 35, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment.click();
@@ -350,7 +396,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Managing_Existing_user_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Managing_Existing_user_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 36, 0);
+			Expected_Result=excel.Read_data(5, 36, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Managing_Existing_user_Page");
 			try {
 				Thread.sleep(15000);
 				Admin_Autoproctored_Assessment_Manage_Existing_User.click();
@@ -364,7 +413,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		}
 		@Test
 		public void Assessment_Autoproctored_Assessment_Managing_New_user_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Managing_New_user_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 37, 0);
+			Expected_Result=excel.Read_data(5, 37, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Managing_New_user_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment_Manage_New_User.click();
@@ -379,7 +431,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Createautoproctored_exam_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Createautoproctored_exam_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 38, 0);
+			Expected_Result=excel.Read_data(5, 38, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Createautoproctored_exam_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment_Create_Autoproctored_Exam.click();
@@ -394,7 +449,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Incompelete_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Incompelete_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 39, 0);
+			Expected_Result=excel.Read_data(5, 39, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Incompelete_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment_Incomplete.click();
@@ -409,7 +467,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Overall_ststus_Page()throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Overall_ststus_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 40, 0);
+			Expected_Result=excel.Read_data(5, 40, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Overall_ststus_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment_overall_status.click();
@@ -424,7 +485,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Autoproctored_Assessment_Candidate_Feedback_Page() throws Exception
-		{	logger = extent.createTest("Assessment_Autoproctored_Assessment_Candidate_Feedback_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 41, 0);
+			Expected_Result=excel.Read_data(5, 41, 7);
+			logger = extent.createTest("Assessment_Autoproctored_Assessment_Candidate_Feedback_Page");
 			try {
 				Thread.sleep(5000);
 				Admin_Autoproctored_Assessment_Candidate_Feedback_status.click();
@@ -439,7 +503,10 @@ public class Hiremee_assessment_page extends Hiremee_Smoke_Test_Driver_Initial{
 		
 		@Test
 		public void Assessment_Logout_Page() throws Exception
-		{	logger = extent.createTest("Assessment_Logout_Page");
+		{	
+			Testcase_ID=excel.Read_data(5, 42, 0);
+			Expected_Result=excel.Read_data(5, 42, 7);
+			logger = extent.createTest("Assessment_Logout_Page");
 			try {
 				ExplicitWait(driver, Admin_Assessment_logout_modal);
 				Admin_Assessment_logout_modal.click();

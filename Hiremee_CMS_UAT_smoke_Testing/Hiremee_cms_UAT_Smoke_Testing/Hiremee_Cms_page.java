@@ -19,133 +19,133 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 
 	@FindBy(how=How.ID,using="check-candidate-link")
 	WebElement Hiremee_cms_overall_login_modal_I_Am_a_student;
-	
+
 	@FindBy(how=How.ID,using="check-college-link")
 	WebElement Hiremee_cms_overall_login_modal_I_Am_a_college;
-	
+
 	@FindBy(how=How.ID,using="check-company-link")
 	WebElement Hiremee_cms_overall_login_modal_I_Am_a_company;
-	
+
 	@FindBy(how=How.XPATH,using="/html/body/div[1]/div/div/div[1]/a/img")
 	WebElement Hiremee_CMS_Hiremee_Logo;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="HireMee App")
 	WebElement Hiremee_cms_Hiremee_Apk;
 
 	@FindBy(how=How.LINK_TEXT,using="Join Us Now")
 	WebElement Hiremee_cms_Join_us;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="View & Apply")
 	WebElement Hiremee_cms_View_and_apply;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Advertising , Media")
 	WebElement Hiremee_cms_Adverting_media;
 
 	@FindBy(how=How.LINK_TEXT,using="Airlines , Aviation , Defence")
 	WebElement Hiremee_cms_Arlines_aviation;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Automobile , Auto Ancillaries & Dealers")
 	WebElement Hiremee_cms_Automobile;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="BFSI")
 	WebElement Hiremee_cms_BFSI;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Capital Goods , Machines")
 	WebElement Hiremee_cms_capital;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Cement , Marble , Stone etc")
 	WebElement Hiremee_cms_cement;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Chemical")
 	WebElement Hiremee_cms_chemical;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Construction, Infrastructure")
 	WebElement Hiremee_cms_construction;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Consumer Durables, Home Appliances")
 	WebElement Hiremee_cms_consumer;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Adilabad")
 	WebElement Hiremee_cms_Adilabad;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Tirunelveli")
 	WebElement Hiremee_cms_Tirunelveli;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Chennai")
 	WebElement Hiremee_cms_chennai;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Bangalore")
 	WebElement Hiremee_cms_Bangalore;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Adilabad")
 	WebElement Hiremee_cms_Adilabad1;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Good Update")
 	WebElement Hiremee_cms_Good_update;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Ahmadnagar")
 	WebElement Hiremee_cms_Ahmadnagar;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Ahmadabad")
 	WebElement Hiremee_cms_Ahmadabad;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Agra")
 	WebElement Hiremee_cms_Agra;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Jobs in Amravati")
 	WebElement Hiremee_cms_Amravati;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="View all Jobs")
 	WebElement Hiremee_cms_View_All_jobs;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="All Job Opportunities")
 	WebElement Hiremee_cms_View_All_job_opportunities;
-	
-	
+
+
 	@FindBy(how=How.LINK_TEXT,using="Companies")
 	WebElement Hiremee_cms_company_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Colleges")
 	WebElement Hiremee_cms_college_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Candidates")
 	WebElement Hiremee_cms_candidate_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Events")
 	WebElement Hiremee_cms_Events_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Blogs")
 	WebElement Hiremee_cms_Blogs_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Media Release")
 	WebElement Hiremee_cms_Media_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Contact us")
 	WebElement Hiremee_cms_contact_us_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="About us")
 	WebElement Hiremee_cms_about_us_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="FAQs")
 	WebElement Hiremee_cms_FAQ_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Site Map")
 	WebElement Hiremee_cms_Sitemap_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Terms of use")
 	WebElement Hiremee_cms_Terms_of_use_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Privacy policy")
 	WebElement Hiremee_cms_Privacy_policy_quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Testimonials")
 	WebElement Hiremee_cms_Testnomials__quick_link;
-	
+
 	@FindBy(how=How.LINK_TEXT,using="Career with us")
 	WebElement Hiremee_cms_carieer_with_us__quick_link;
-	
-	
-	
+
+
+
 	WebDriver driver;
 	Property_File_Config config;
 	//String home_url;
@@ -160,6 +160,8 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Hiremee_cms_Home_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 19, 0);
+		Expected_Result=excel.Read_data(7, 19, 7);
 		logger=extent.createTest("Hiremee_cms_Home_page");
 		try
 		{
@@ -179,6 +181,8 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Hiremee_cms_overall_Login_modal_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 20, 0);
+		Expected_Result=excel.Read_data(7, 20, 7);
 		logger=extent.createTest("Hiremee_cms_overall_Login_modal_page");
 		try
 		{
@@ -193,10 +197,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_i_am_a_student_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 21, 0);
+		Expected_Result=excel.Read_data(7, 21, 7);
 		logger=extent.createTest("Hiremee_cms_i_am_a_student_page");
 		try
 		{
@@ -212,10 +218,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_i_am_a_college_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 22, 0);
+		Expected_Result=excel.Read_data(7, 22, 7);
 		logger=extent.createTest("Hiremee_cms_i_am_a_college_page");
 		try
 		{
@@ -233,10 +241,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_i_am_a_company_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 23, 0);
+		Expected_Result=excel.Read_data(7, 23, 7);
 		logger=extent.createTest("Hiremee_cms_i_am_a_company_page");
 		try
 		{
@@ -253,10 +263,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_Hiremee_logo_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 24, 0);
+		Expected_Result=excel.Read_data(7, 24, 7);
 		logger=extent.createTest("Hiremee_cms_Hiremee_app_page");
 		try
 		{
@@ -271,10 +283,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_Hiremee_app_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 25, 0);
+		Expected_Result=excel.Read_data(7, 25, 7);
 		logger=extent.createTest("Hiremee_cms_Hiremee_app_page");
 		try
 		{
@@ -290,10 +304,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_Advertising_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 26, 0);
+		Expected_Result=excel.Read_data(7, 26, 7);
 		logger=extent.createTest("Hiremee_cms_Advertising_page");
 		try
 		{
@@ -309,10 +325,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_Arlines_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 27, 0);
+		Expected_Result=excel.Read_data(7, 27, 7);
 		logger=extent.createTest("Hiremee_cms_Arlines_page");
 		try
 		{
@@ -328,11 +346,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Automobile_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 28, 0);
+		Expected_Result=excel.Read_data(7, 28, 7);
 		logger=extent.createTest("Hiremee_cms_Automobile_page");
 		try
 		{
@@ -348,12 +368,14 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
 
-	
+
+
 	@Test
 	public void Hiremee_cms_BFSI_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 29, 0);
+		Expected_Result=excel.Read_data(7, 29, 7);
 		logger=extent.createTest("Hiremee_cms_BFSI_page");
 		try
 		{
@@ -369,10 +391,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}
-	
+
 	@Test
 	public void Hiremee_cms_Capital_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 30, 0);
+		Expected_Result=excel.Read_data(7, 30, 7);
 		logger=extent.createTest("Hiremee_cms_Capital_page");
 		try
 		{
@@ -388,11 +412,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Cement_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 31, 0);
+		Expected_Result=excel.Read_data(7, 31, 7);
 		logger=extent.createTest("Hiremee_cms_Cement_page");
 		try
 		{
@@ -408,10 +434,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Chemical_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 32, 0);
+		Expected_Result=excel.Read_data(7, 32, 7);
 		logger=extent.createTest("Hiremee_cms_Chemical_page");
 		try
 		{
@@ -427,10 +455,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Construction_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 33, 0);
+		Expected_Result=excel.Read_data(7, 33, 7);
 		logger=extent.createTest("Hiremee_cms_Construction_page");
 		try
 		{
@@ -446,10 +476,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Consumer_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 34, 0);
+		Expected_Result=excel.Read_data(7, 34, 7);
 		logger=extent.createTest("Hiremee_cms_Consumer_page");
 		try
 		{
@@ -465,10 +497,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Adilabad_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 35, 0);
+		Expected_Result=excel.Read_data(7, 35, 7);
 		logger=extent.createTest("Hiremee_cms_Adilabad_page");
 		try
 		{
@@ -484,10 +518,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Tirunelveli_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 36, 0);
+		Expected_Result=excel.Read_data(7, 36, 7);
 		logger=extent.createTest("Hiremee_cms_Tirunelveli_page");
 		try
 		{
@@ -503,10 +539,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Chennai_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 37, 0);
+		Expected_Result=excel.Read_data(7, 37, 7);
 		logger=extent.createTest("Hiremee_cms_Chennai_page");
 		try
 		{
@@ -522,11 +560,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Bangalore_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 38, 0);
+		Expected_Result=excel.Read_data(7, 38, 7);
 		logger=extent.createTest("Hiremee_cms_Bangalore_page");
 		try
 		{
@@ -542,11 +582,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 
 	@Test
 	public void Hiremee_cms_Adilabad1_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 39, 0);
+		Expected_Result=excel.Read_data(7, 39, 7);
 		logger=extent.createTest("Hiremee_cms_Adilabad1_page");
 		try
 		{
@@ -562,10 +604,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Good_Update_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 40, 0);
+		Expected_Result=excel.Read_data(7, 40, 7);
 		logger=extent.createTest("Hiremee_cms_Good_Update_page");
 		try
 		{
@@ -581,10 +625,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Ahmednagar_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 41, 0);
+		Expected_Result=excel.Read_data(7, 41, 7);
 		logger=extent.createTest("Hiremee_cms_Ahmednagar_page");
 		try
 		{
@@ -600,10 +646,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Ahmadabad_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 42, 0);
+		Expected_Result=excel.Read_data(7, 42, 7);
 		logger=extent.createTest("Hiremee_cms_Ahmadabad_page");
 		try
 		{
@@ -619,14 +667,16 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Agra_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 43, 0);
+		Expected_Result=excel.Read_data(7, 43, 7);
 		logger=extent.createTest("Hiremee_cms_Agra_page");
 		try
 		{
-			
+
 			ExplicitWait(driver,Hiremee_cms_Agra);
 			Hiremee_cms_Agra.click();
 			driver.navigate().back();
@@ -639,10 +689,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Amravati_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 44, 0);
+		Expected_Result=excel.Read_data(7, 44, 7);
 		logger=extent.createTest("Hiremee_cms_Amravati_page");
 		try
 		{
@@ -658,10 +710,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_company_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 45, 0);
+		Expected_Result=excel.Read_data(7, 45, 7);
 		logger=extent.createTest("Hiremee_cms_company_quick_link_page");
 		try
 		{
@@ -677,10 +731,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_college_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 46, 0);
+		Expected_Result=excel.Read_data(7, 46, 7);
 		logger=extent.createTest("Hiremee_cms_college_quick_link_page");
 		try
 		{
@@ -696,10 +752,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_candidate_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 47, 0);
+		Expected_Result=excel.Read_data(7, 47, 7);
 		logger=extent.createTest("Hiremee_cms_candidate_quick_link_page");
 		try
 		{
@@ -715,11 +773,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Events_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 48, 0);
+		Expected_Result=excel.Read_data(7, 48, 7);
 		logger=extent.createTest("Hiremee_cms_Events_quick_link_page");
 		try
 		{
@@ -735,10 +795,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Blogs_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 19, 0);
+		Expected_Result=excel.Read_data(7, 49, 7);
 		logger=extent.createTest("Hiremee_cms_Blogs_quick_link_page");
 		try
 		{
@@ -754,11 +816,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Media_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 50, 0);
+		Expected_Result=excel.Read_data(7, 50, 7);
 		logger=extent.createTest("Hiremee_cms_Media_quick_link_page");
 		try
 		{
@@ -774,10 +838,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Contact_us_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 51, 0);
+		Expected_Result=excel.Read_data(7, 51, 7);
 		logger=extent.createTest("Hiremee_cms_Media_quick_link_page");
 		try
 		{
@@ -793,11 +859,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_About_us_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 52, 0);
+		Expected_Result=excel.Read_data(7, 52, 7);
 		logger=extent.createTest("Hiremee_cms_Media_quick_link_page");
 		try
 		{
@@ -813,10 +881,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_FAQ_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 53, 0);
+		Expected_Result=excel.Read_data(7, 53, 7);
 		logger=extent.createTest("Hiremee_cms_FAQ_quick_link_page");
 		try
 		{
@@ -832,10 +902,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Sitemap_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 54, 0);
+		Expected_Result=excel.Read_data(7, 54, 7);
 		logger=extent.createTest("Hiremee_cms_Sitemap_quick_link_page");
 		try
 		{
@@ -851,10 +923,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Terms_use_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 55, 0);
+		Expected_Result=excel.Read_data(7, 55, 7);
 		logger=extent.createTest("Hiremee_cms_Terms_use_quick_link_page");
 		try
 		{
@@ -870,10 +944,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Privacy_policy_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 56, 0);
+		Expected_Result=excel.Read_data(7, 56, 7);
 		logger=extent.createTest("Hiremee_cms_Privacy_policy_quick_link_page");
 		try
 		{
@@ -889,11 +965,13 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 	@Test
 	public void Hiremee_cms_Testnomials_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 57, 0);
+		Expected_Result=excel.Read_data(7, 57, 7);
 		logger=extent.createTest("Hiremee_cms_Testnomials_quick_link_page");
 		try
 		{
@@ -909,10 +987,12 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
+
 	@Test
 	public void Hiremee_cms_Carieer_quick_link_page() throws Exception
 	{		
+		Testcase_ID=excel.Read_data(7, 58, 0);
+		Expected_Result=excel.Read_data(7, 58, 7);
 		logger=extent.createTest("Hiremee_cms_Carieer_quick_link_page");
 		try
 		{
@@ -928,6 +1008,6 @@ public class Hiremee_Cms_page extends Hiremee_Smoke_Test_Driver_Initial
 			throw(e);	
 		}
 	}	
-	
-	
+
+
 }
