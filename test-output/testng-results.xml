@@ -1,126 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="344818" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:29:19Z">
+  <suite name="Default suite" duration-ms="227823" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:20:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="344818" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:29:19Z">
-      <class name="Driver_Started_Company_Module.Driver_Class">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="startReport" is-config="true" duration-ms="1432" started-at="2019-04-09T13:23:32Z" finished-at="2019-04-09T13:23:34Z">
+    <test name="Default test" duration-ms="227823" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:20:37Z">
+      <class name="Driver_Started_Candidate_Module.Candidate_Driver_Class">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="startReport" is-config="true" duration-ms="1434" started-at="2019-04-12T13:16:48Z" finished-at="2019-04-12T13:16:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Start_driver" is-config="true" duration-ms="4932" started-at="2019-04-09T13:23:34Z" finished-at="2019-04-09T13:23:39Z">
+        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="Start_driver" is-config="true" duration-ms="8477" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:16:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Start_driver -->
-        <test-method status="PASS" signature="Company_Login_Testcase()[pri:1, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Company_Login_Testcase" duration-ms="9621" started-at="2019-04-09T13:23:39Z" finished-at="2019-04-09T13:23:48Z">
+        <test-method status="PASS" signature="Candidate_Assessment_Exam_Testcase()[pri:3, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="Candidate_Assessment_Exam_Testcase" duration-ms="215718" started-at="2019-04-12T13:16:58Z" finished-at="2019-04-12T13:20:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Company_Login_Testcase -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="9" started-at="2019-04-09T13:23:48Z" finished-at="2019-04-09T13:23:48Z">
+        </test-method> <!-- Candidate_Assessment_Exam_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="8" started-at="2019-04-12T13:20:34Z" finished-at="2019-04-12T13:20:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Company_Login_Testcase status=SUCCESS method=Driver_Class.Company_Login_Testcase()[pri:1, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
+                <![CDATA[[TestResult name=Candidate_Assessment_Exam_Testcase status=SUCCESS method=Candidate_Driver_Class.Candidate_Assessment_Exam_Testcase()[pri:3, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Manage_Assessment()[pri:8, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Assessment" duration-ms="103162" started-at="2019-04-09T13:23:48Z" finished-at="2019-04-09T13:25:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Manage_Assessment -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-09T13:25:32Z" finished-at="2019-04-09T13:25:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Manage_Assessment status=SUCCESS method=Driver_Class.Manage_Assessment()[pri:8, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Manage_Book_Assessment()[pri:9, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Book_Assessment" duration-ms="41092" started-at="2019-04-09T13:25:32Z" finished-at="2019-04-09T13:26:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Manage_Book_Assessment -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-09T13:26:13Z" finished-at="2019-04-09T13:26:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Manage_Book_Assessment status=SUCCESS method=Driver_Class.Manage_Book_Assessment()[pri:9, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="FAIL" signature="Manage_Candidate_Testcases()[pri:10, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="Manage_Candidate_Testcases" duration-ms="185057" started-at="2019-04-09T13:26:13Z" finished-at="2019-04-09T13:29:18Z">
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[19]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 19
-at Hiremee_Company_Module_Pages.Company_Pro_Manage_Candidate_Page.company_manage_candidate(Company_Pro_Manage_Candidate_Page.java:75)
-at Hiremee_Company_Module_Testcases.Company_Pro_Manage_Candidate_Testcase.Manage_candidate_Test(Company_Pro_Manage_Candidate_Testcase.java:25)
-at Driver_Started_Company_Module.Driver_Class.Manage_Candidate_Testcases(Driver_Class.java:268)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Manage_Candidate_Testcases -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="712" started-at="2019-04-09T13:29:18Z" finished-at="2019-04-09T13:29:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Manage_Candidate_Testcases status=FAILURE method=Driver_Class.Manage_Candidate_Testcases()[pri:10, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="driver_close" is-config="true" duration-ms="198" started-at="2019-04-09T13:29:18Z" finished-at="2019-04-09T13:29:19Z">
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="driver_close" is-config="true" duration-ms="3604" started-at="2019-04-12T13:20:34Z" finished-at="2019-04-12T13:20:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driver_close -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started_Company_Module.Driver_Class@5e5d171f]" name="teardown" is-config="true" duration-ms="5340" started-at="2019-04-09T13:29:19Z" finished-at="2019-04-09T13:29:24Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="teardown" is-config="true" duration-ms="11307" started-at="2019-04-12T13:20:37Z" finished-at="2019-04-12T13:20:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Driver_Started_Company_Module.Driver_Class -->
+      </class> <!-- Driver_Started_Candidate_Module.Candidate_Driver_Class -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

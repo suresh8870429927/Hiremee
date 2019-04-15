@@ -64,8 +64,8 @@ public class Candidate_Driver_Class {
 	public static ExtentReports extent;
 	public static ExtentTest logger;
 	public static String Exam_center;
-	public static String Hiremee_id;
-	public static String password;
+	public static String Hiremee_id="HC424194";
+	public static String password="123456";
 	WebDriver driver;
 	WebDriverWait wait;
 	@BeforeSuite(alwaysRun=true)
@@ -86,22 +86,23 @@ public class Candidate_Driver_Class {
 	public void Start_driver() throws Exception
 	{
 		//WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		//driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		driver = new ChromeDriver();
 
-		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		/*//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setPlatform(Platform.WINDOWS);
 		URL url=new URL("http://172.18.1.34:31154/wd/hub");
 		driver=new RemoteWebDriver(url, cap);
 		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+*/
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 	}
-
+/*
 	@Test(priority=0)
 	public void Candidate_Assessment_Exam_Center_Testcase() throws Exception
 	{
@@ -147,7 +148,7 @@ public class Candidate_Driver_Class {
 
 		}
 	}
-
+*/
 	@Test(priority=3)
 	public void Candidate_Assessment_Exam_Testcase() throws Exception
 	{
@@ -163,7 +164,7 @@ public class Candidate_Driver_Class {
 		}
 	}
 
-
+/*
 	@Test(priority=4)
 	public void Candidate_login_Testcase() throws Exception
 	{
@@ -326,7 +327,7 @@ public class Candidate_Driver_Class {
 		}
 
 	}
-
+*/
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception
 	{

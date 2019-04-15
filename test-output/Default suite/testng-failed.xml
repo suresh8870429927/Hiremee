@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Driver_Started_Company_Module.Driver_Class">
+      <class name="Driver_Started_Candidate_Module.Candidate_Driver_Class">
         <methods>
+          <include name="Candidate_Assessment_Exam_Testcase"/>
+          <include name="Start_driver"/>
           <include name="driver_close"/>
-          <include name="getResult"/>
           <include name="startReport"/>
           <include name="teardown"/>
-          <include name="Manage_Candidate_Testcases"/>
-          <include name="Start_driver"/>
+          <include name="getResult"/>
         </methods>
-      </class> <!-- Driver_Started_Company_Module.Driver_Class -->
+      </class> <!-- Driver_Started_Candidate_Module.Candidate_Driver_Class -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
