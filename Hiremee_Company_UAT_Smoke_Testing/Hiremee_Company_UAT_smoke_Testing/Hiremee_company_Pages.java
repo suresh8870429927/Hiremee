@@ -82,16 +82,16 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[1]/div[1]/form/div/button")
 	WebElement Feedback_mobal_close;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/nav/div/div[2]/div/ul[2]/li[2]/a/i")
+	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[1]/nav/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[2]/i")
 	WebElement Company_modal;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/nav/div/div[2]/div/ul[2]/li[2]/ul/li[1]/a")
+	@FindBy(how=How.LINK_TEXT,using="Company Profile")
 	WebElement Company_Profile;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/nav/div/div[2]/div/ul[2]/li[2]/ul/li[2]/a")
+	@FindBy(how=How.LINK_TEXT,using="Change Password")
 	WebElement Company_Change_Password;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/nav/div/div[2]/div/ul[2]/li[2]/ul/li[3]/a")
+	@FindBy(how=How.LINK_TEXT,using="Logout")
 	WebElement Company_Logout;
 	
 	WebDriver driver;
@@ -109,6 +109,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void company_Home_page() throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 19, 0);
+		Expected_Result=excel.Read_data(3, 19, 7);
 		logger = extent.createTest("company_Home_page");
 		try
 		{
@@ -127,6 +129,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void company_login() throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 21, 0);
+		Expected_Result=excel.Read_data(3, 21, 7);
 		logger = extent.createTest("company_login");
 		try
 		{
@@ -154,6 +158,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void company_dashboard() throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 22, 0);
+		Expected_Result=excel.Read_data(3, 22, 7);
 		logger = extent.createTest("company_dashboard");
 		try
 		{	ExplicitWait(driver,Dashboard);
@@ -175,6 +181,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Recruiter() throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 23, 0);
+		Expected_Result=excel.Read_data(3, 23, 7);
 		logger = extent.createTest("Recruiter");
 		try 
 		{
@@ -195,6 +203,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Registered_recruiter() throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 24, 0);
+		Expected_Result=excel.Read_data(3, 24, 7);
 		logger = extent.createTest("Registered_recruiter");
 		try
 		{
@@ -215,6 +225,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Invited_recruiter()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 25, 0);
+		Expected_Result=excel.Read_data(3, 25, 7);
 		logger = extent.createTest("Invited_recruiter");
 		try
 		{
@@ -235,6 +247,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 26, 0);
+		Expected_Result=excel.Read_data(3, 26, 7);
 		logger = extent.createTest("Candidate");
 		try
 		{
@@ -256,6 +270,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void All_candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 27, 0);
+		Expected_Result=excel.Read_data(3, 27, 7);
 		logger = extent.createTest("All_candidate");
 		try
 		{
@@ -277,6 +293,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Shortlisted_candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 28, 0);
+		Expected_Result=excel.Read_data(3, 28, 7);
 		logger = extent.createTest("Shortlisted_candidate");
 		try
 		{
@@ -297,6 +315,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Invited_candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 29, 0);
+		Expected_Result=excel.Read_data(3, 29, 7);
 		logger = extent.createTest("Invited_candidate");
 		try
 		{
@@ -317,6 +337,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Hired_candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 30, 0);
+		Expected_Result=excel.Read_data(3, 30, 7);
 		logger = extent.createTest("Hired_candidate");
 		try
 		{
@@ -337,6 +359,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Jobs()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 31, 0);
+		Expected_Result=excel.Read_data(3, 31, 7);
 		logger = extent.createTest("Jobs");
 		try
 		{
@@ -357,6 +381,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Posted_Jobs()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 32, 0);
+		Expected_Result=excel.Read_data(3, 32, 7);
 		logger = extent.createTest("Posted_Jobs");
 		try
 		{
@@ -377,6 +403,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Application_Jobs()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 33, 0);
+		Expected_Result=excel.Read_data(3, 33, 7);
 		logger = extent.createTest("Application_Jobs");
 		try
 		{
@@ -397,6 +425,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Post_Jobs()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 34, 0);
+		Expected_Result=excel.Read_data(3, 34, 7);
 		logger = extent.createTest("Post_Jobs");
 		try
 		{
@@ -417,6 +447,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Search_candidate()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 35, 0);
+		Expected_Result=excel.Read_data(3, 35, 7);
 		logger = extent.createTest("Search_candidate");
 		try
 		{
@@ -437,6 +469,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Email_Template()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 36, 0);
+		Expected_Result=excel.Read_data(3, 36, 7);
 		logger = extent.createTest("Email_Template");
 		try
 		{
@@ -457,6 +491,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void FAQ()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 37, 0);
+		Expected_Result=excel.Read_data(3, 37, 7);
 		logger = extent.createTest("FAQ");
 		try {
 			ExplicitWait(driver,FAQs);
@@ -476,6 +512,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Feedback()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 38, 0);
+		Expected_Result=excel.Read_data(3, 38, 7);
 		logger = extent.createTest("Feedback");
 		try
 		{	
@@ -498,6 +536,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Company_profile()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 39, 0);
+		Expected_Result=excel.Read_data(3, 39, 7);
 		logger = extent.createTest("Company_profile");
 		try
 		{
@@ -520,6 +560,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void Change_password()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 40, 0);
+		Expected_Result=excel.Read_data(3, 40, 7);
 		logger = extent.createTest("Change_password");
 		try
 		{
@@ -542,6 +584,8 @@ public class Hiremee_company_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test
 	public void logout()throws Exception
 	{
+		Testcase_ID=excel.Read_data(3, 41, 0);
+		Expected_Result=excel.Read_data(3, 41, 7);
 		logger = extent.createTest("logout");
 		try
 		{

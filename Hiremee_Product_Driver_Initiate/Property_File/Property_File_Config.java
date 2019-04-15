@@ -22,12 +22,20 @@ public class Property_File_Config
 		}
 	}
 
+	//Chrome driver
 	public String getChromeDriver()
 	{
 		String Chromepath=pro.getProperty("Chrome_Driver");
 		return Chromepath;
 	}
 
+	//Firefox driver
+	public String geFirefoxDriver()
+	{
+		String Firefoxpath=pro.getProperty("Firefox_Driver");
+		return Firefoxpath;
+	}
+	
 	//candidate module
 	public String getCandidate_url()
 	{

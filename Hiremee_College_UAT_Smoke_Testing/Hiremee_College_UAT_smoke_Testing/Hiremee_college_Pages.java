@@ -65,16 +65,13 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div/div[1]/div[1]/div/form/button")
 	WebElement College_Feedback_modal;
 	
-	
 	@FindBy(how=How.CSS,using=".ti-angle-down")
 	WebElement College_modal;
 	
-	@FindBy(how=How.CSS,using=".show-notification > li:nth-child(4) > a:nth-child(1)")
-	@CacheLookup
+	@FindBy(how=How.LINK_TEXT,using="Change Password")
 	WebElement College_Change_password;
 	
-	@FindBy(how=How.CSS,using=".show-notification > li:nth-child(6) > a:nth-child(1)")
-	@CacheLookup
+	@FindBy(how=How.LINK_TEXT,using="logout")
 	WebElement College_Logout;
 	
 	WebDriver driver;
@@ -93,6 +90,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void College_Home_page() throws Exception
 	{	
+		Testcase_ID=excel.Read_data(2, 19, 0);
+		Expected_Result=excel.Read_data(2, 19, 7);
 		logger = extent.createTest("College_Home_page");
 		try 
 		{
@@ -111,6 +110,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void College_Login() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 21, 0);
+		Expected_Result=excel.Read_data(2, 21, 7);
 		logger = extent.createTest("College_Login");
 		try
 		{
@@ -139,6 +140,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void College_Dashboard_College() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 22, 0);
+		Expected_Result=excel.Read_data(2, 22, 7);
 		logger = extent.createTest("College_Dashboard_College");
 		try
 		{
@@ -160,6 +163,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void College_Profile() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 23, 0);
+		Expected_Result=excel.Read_data(2, 23, 7);
 		logger = extent.createTest("College_Profile");
 		try
 		{
@@ -181,6 +186,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Registered_Students() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 24, 0);
+		Expected_Result=excel.Read_data(2, 24, 7);
 		logger = extent.createTest("Registered_Students");
 		try
 		{
@@ -202,6 +209,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Upload_Student_details() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 25, 0);
+		Expected_Result=excel.Read_data(2, 25, 7);
 		logger = extent.createTest("Upload_Student_details");
 		try
 		{
@@ -223,6 +232,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Student_Assessment_result() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 26, 0);
+		Expected_Result=excel.Read_data(2, 26, 7);
 		logger = extent.createTest("Student_Assessment_result");
 		try
 		{
@@ -243,6 +254,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void FAQ() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 27, 0);
+		Expected_Result=excel.Read_data(2, 27, 7);
 		logger = extent.createTest("FAQ");
 
 		try {
@@ -263,6 +276,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Feedback() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 28, 0);
+		Expected_Result=excel.Read_data(2, 28, 7);
 		logger = extent.createTest("Feedback");
 		try {
 			ExplicitWait(driver,Feedback);
@@ -284,6 +299,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Change_password() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 29, 0);
+		Expected_Result=excel.Read_data(2, 29, 7);
 		logger = extent.createTest("Change_password");
 		try {
 
@@ -308,6 +325,8 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 	@Test()
 	public void Logout() throws Exception
 	{
+		Testcase_ID=excel.Read_data(2, 30, 0);
+		Expected_Result=excel.Read_data(2, 30, 7);
 		logger = extent.createTest("Logout");
 		try {
 

@@ -6,11 +6,13 @@
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial">
         <methods>
           <include name="driver_close"/>
+          <include name="Hiremee_Automation_Recruiter_Change_Password_page"/>
+          <include name="Hiremee_Web_pro_Logout_Testcase"/>
+          <include name="Hiremee_Automation_Recruiter_Logout_page"/>
           <include name="getResult"/>
           <include name="startReport"/>
           <include name="teardown"/>
           <include name="Start_driver"/>
-          <include name="Hiremee_Automation_candidate_module_Home_page"/>
         </methods>
       </class> <!-- Driver_Started.Hiremee_Smoke_Test_Driver_Initial -->
     </classes>

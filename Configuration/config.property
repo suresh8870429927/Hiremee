@@ -1,25 +1,26 @@
 Chrome_Driver=./Driver/chromedriver.exe
+Firefox_Driver=./Driver/geckodriver.exe
 
-Hiremee_Home_url=http://172.18.1.87:81/
+Hiremee_Home_url=https://hiremee.co.in/
 
 //Candidate 
-candidate_url=http://172.18.1.87:81/candidate
-candidate_Username=uattest8@yopmail.com
+candidate_url=https://hiremee.co.in/candidate
+candidate_Username=Automationcandidate@mailnesia.com
 Candidate_Password=123456
 
 //College 
-College_url=http://172.18.1.87:81/college
-college_username=uatchecker@yopmail.com
+College_url=https://hiremee.co.in/college
+college_username=Automationcollege@hiremee.com
 college_password=Temp!123
 
 //company
-Company_url=http://172.18.1.87:81/company
-company_username=testcompany@yopmail.com
+Company_url=https://hiremee.co.in/company
+company_username=procompany@mailnesia.com
 company_password=Temp!123
 
 //Recruiter
-Recruiter_url=http://172.18.1.87:81/company
-recruiter_username=testcompany@yopmail.com
+Recruiter_url=https://hiremee.co.in/company
+recruiter_username=prorecruiter@mailnesia.com
 recruiter_password=Temp!123
 
 //Assessment
