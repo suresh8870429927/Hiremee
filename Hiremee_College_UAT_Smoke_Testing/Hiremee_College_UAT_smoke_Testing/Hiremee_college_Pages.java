@@ -308,7 +308,7 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 			Actions act1=new Actions(driver);
 			ExplicitWait(driver,College_modal);
 			WebElement qrcode =College_modal;
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			act1.moveToElement(qrcode).click().build().perform();
 			College_Change_password.click();
 			excel.Write_data_pass(2, 29, 11);
@@ -334,7 +334,7 @@ public class Hiremee_college_Pages extends Hiremee_Smoke_Test_Driver_Initial
 			Actions act2=new Actions(driver);
 			ExplicitWait(driver,College_modal);
 			WebElement qrcode1 =College_modal;
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			act2.moveToElement(qrcode1).click().build().perform();
 			College_Logout.click();
 			excel.Write_data_pass(2, 30, 11);

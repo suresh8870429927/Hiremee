@@ -2,6 +2,7 @@
 package Driver_Started;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import javax.mail.Message;
@@ -38,6 +39,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -45,6 +47,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -55,7 +58,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.sun.mail.handlers.message_rfc822;
-
 import Hiremee_Assessment_UAT_Smoke_Testing.Hiremee_assessment_Testcase;
 import Hiremee_College_UAT_smoke_Testing.Hiremee_college_Testcases;
 import Hiremee_Company_UAT_smoke_Testing.Hiremee_Company_Testcases;
@@ -90,6 +92,8 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 	public static String Fail;
 	public static String Skip;
 	public static String Total;
+
+	public String browser_name;
 	WebDriver driver;
 	WebDriverWait wait;
 	@BeforeSuite(alwaysRun=true)
@@ -107,23 +111,25 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 	}
 
 	@BeforeTest
-	public void Start_driver() throws Exception
+	@Parameters("browser")
+	public void Start_driver(String browser_name) throws Exception
 	{
 		config=new Property_File_Config();
-		//WebDriverManager.chromedriver().setup();
-	
-		//Chrome
-		System.setProperty("webdriver.chrome.driver",config.getChromeDriver());
-		driver = new ChromeDriver();
-		
-		/*//Firefox
-		System.setProperty("webdriver.gecko.driver",config.geFirefoxDriver());
-		driver = new FirefoxDriver();*/
-		
+		if(browser_name.equalsIgnoreCase("firefox"))
+		{
+			//Firefox
+			System.setProperty("webdriver.gecko.driver",config.geFirefoxDriver());
+			driver = new FirefoxDriver();
+		}
+		else if(browser_name.equalsIgnoreCase("chrome"))
+		{
+			//Chrome
+			System.setProperty("webdriver.chrome.driver",config.getChromeDriver());
+			driver = new ChromeDriver();
+		}
 		Reporter.log(">=============================Hiremee_Project_Driver_Initiated=====================================<",true);
 
 		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		
 		/*
 		//Raj system-client
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
@@ -131,7 +137,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		URL url=new URL("http://172.18.1.34:36728/wd/hub");
 		 */
 
-/*
+		/*
 		//Suresh System-client
 		DesiredCapabilities cap = DesiredCapabilities.firefox();
 		cap.setPlatform(Platform.WINDOWS);
@@ -139,7 +145,8 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		driver=new RemoteWebDriver(url, cap);
 		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-*/
+		 */
+
 		driver.manage().window().maximize();
 		Reporter.log(">=============================Hiremee_Project_Browser_Started=====================================<",true);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -161,7 +168,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}
 	}
-	
+	/*
 	@Test(priority=1)
 	public void Hiremee_Automation_candidate_module_login_page() throws Exception
 	{
@@ -205,7 +212,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}	
 	}
-
+	
 	@Test(priority=4)
 	public void Hiremee_Automation_candidate_module_Take_Online_Assessment_page() throws Exception
 	{
@@ -401,7 +408,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}	
 	}
 
-	
+
 	@Test(priority=18)
 	public void Hiremee_Automation_candidate_logout_page() throws Exception
 	{
@@ -415,7 +422,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}	
 	}
-	
+
 	//college module
 	@Test(priority=19)
 	public void Hiremee_Automation_college_Home_page() throws Exception
@@ -729,7 +736,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-		throw(e);
+			throw(e);
 		}
 	}	
 	@Test(priority=44)
@@ -1058,8 +1065,9 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 			throw(e);
 		}
 	}	
+	*/
 
-/*
+	/*
 	//Assessment_module
 	@Test(priority=71)
 	public void Hiremee_Assessment_Home_Page() throws Exception
@@ -1381,7 +1389,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 	}
 	 */
-	
+/*
 	//cms page
 	@Test(priority=94)
 	public void Hiremee_Cms_Home_Testcase() throws Exception 
@@ -2001,7 +2009,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 			//throw(e);
 		}
 	}
-	
+*/
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception
 	{
@@ -2022,18 +2030,13 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		{
 			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" Test Case Skipped", ExtentColor.YELLOW));
 		}
-
+		
 	}
 	@AfterTest
-	public void driver_close() {
+	public void driver_close() throws Exception {
 		driver.quit();
-		Reporter.log(">=============================Hiremee_Project_Driver_End=====================================<",true);
-	}
-	@AfterSuite()
-	public void teardown() throws Exception
-	{
-		//extent.flush();
-		Thread.sleep(50000);
+		extent.flush();
+		Thread.sleep(1000);
 		//Count  for pass or fail of skip
 		config=new Property_File_Config();
 		File xmlFile = new File(config.getxmlpath());
@@ -2128,6 +2131,12 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		email.attach(attachment);
 		email.setHtmlMsg(htmlEmailTemplate);
 		email.send();
+		extent.removeTest(logger);
+		Reporter.log(">=============================Hiremee_Project_Driver_End=====================================<",true);
+	}
+	@AfterSuite()
+	public void teardown() throws Exception
+	{
 		System.out.println("Mail Send Sucessfully");
 	} 
 

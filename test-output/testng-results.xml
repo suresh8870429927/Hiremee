@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
     <line>
       <![CDATA[>=============================Hiremee_Project_Driver_Initiated=====================================<]]>
@@ -10,17 +10,29 @@
     <line>
       <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
     </line>
+    <line>
+      <![CDATA[>=============================Hiremee_Project_Driver_Initiated=====================================<]]>
+    </line>
+    <line>
+      <![CDATA[>=============================Hiremee_Project_Browser_Started=====================================<]]>
+    </line>
+    <line>
+      <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12226" started-at="2019-04-12T14:12:43Z" finished-at="2019-04-12T14:12:56Z">
+  <suite name="Hiremee_UAT_Smoke_Testing" duration-ms="191094" started-at="2019-04-23T10:37:11Z" finished-at="2019-04-23T10:40:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12226" started-at="2019-04-12T14:12:43Z" finished-at="2019-04-12T14:12:56Z">
+    <test name="Automation_Testing_Chrome_Browser" duration-ms="99164" started-at="2019-04-23T10:37:11Z" finished-at="2019-04-23T10:38:50Z">
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="startReport" is-config="true" duration-ms="332" started-at="2019-04-12T14:12:43Z" finished-at="2019-04-12T14:12:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Start_driver" is-config="true" duration-ms="7703" started-at="2019-04-12T14:12:43Z" finished-at="2019-04-12T14:12:51Z">
+        <test-method status="PASS" signature="Start_driver(java.lang.String)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@60783105]" name="Start_driver" is-config="true" duration-ms="17869" started-at="2019-04-23T10:37:11Z" finished-at="2019-04-23T10:37:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[>=============================Hiremee_Project_Driver_Initiated=====================================<]]>
@@ -30,33 +42,80 @@
             </line>
           </reporter-output>
         </test-method> <!-- Start_driver -->
-        <test-method status="PASS" signature="Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="Hiremee_Automation_candidate_module_Home_page" duration-ms="3622" started-at="2019-04-12T14:12:51Z" finished-at="2019-04-12T14:12:55Z">
+        <test-method status="PASS" signature="Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@60783105]" name="Hiremee_Automation_candidate_module_Home_page" duration-ms="14041" started-at="2019-04-23T10:37:29Z" finished-at="2019-04-23T10:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Hiremee_Automation_candidate_module_Home_page -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="getResult" is-config="true" duration-ms="11" started-at="2019-04-12T14:12:55Z" finished-at="2019-04-12T14:12:55Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@60783105]" name="getResult" is-config="true" duration-ms="43" started-at="2019-04-23T10:37:43Z" finished-at="2019-04-23T10:37:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Hiremee_Automation_candidate_module_Home_page status=SUCCESS method=Hiremee_Smoke_Test_Driver_Initial.Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a] output={null}]]]>
+                <![CDATA[[TestResult name=Hiremee_Automation_candidate_module_Home_page status=SUCCESS method=Hiremee_Smoke_Test_Driver_Initial.Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@60783105] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="driver_close" is-config="true" duration-ms="868" started-at="2019-04-12T14:12:55Z" finished-at="2019-04-12T14:12:56Z">
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@60783105]" name="driver_close" is-config="true" duration-ms="67190" started-at="2019-04-23T10:37:43Z" finished-at="2019-04-23T10:38:50Z">
           <reporter-output>
             <line>
               <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
             </line>
           </reporter-output>
         </test-method> <!-- driver_close -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@42e99e4a]" name="teardown" is-config="true" duration-ms="59187" started-at="2019-04-12T14:12:56Z" finished-at="2019-04-12T14:13:55Z">
+      </class> <!-- Driver_Started.Hiremee_Smoke_Test_Driver_Initial -->
+    </test> <!-- Automation_Testing_Chrome_Browser -->
+    <test name="Automation_Testing_Firefox_Browser" duration-ms="91897" started-at="2019-04-23T10:38:50Z" finished-at="2019-04-23T10:40:22Z">
+      <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="startReport" is-config="true" duration-ms="250" started-at="2019-04-23T10:37:11Z" finished-at="2019-04-23T10:37:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="Start_driver(java.lang.String)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="Start_driver" is-config="true" duration-ms="16711" started-at="2019-04-23T10:38:50Z" finished-at="2019-04-23T10:39:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[>=============================Hiremee_Project_Driver_Initiated=====================================<]]>
+            </line>
+            <line>
+              <![CDATA[>=============================Hiremee_Project_Browser_Started=====================================<]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Start_driver -->
+        <test-method status="PASS" signature="Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="Hiremee_Automation_candidate_module_Home_page" duration-ms="7183" started-at="2019-04-23T10:39:07Z" finished-at="2019-04-23T10:39:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Hiremee_Automation_candidate_module_Home_page -->
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="driver_close" is-config="true" duration-ms="68000" started-at="2019-04-23T10:39:14Z" finished-at="2019-04-23T10:40:22Z">
+          <reporter-output>
+            <line>
+              <![CDATA[>=============================Hiremee_Project_Driver_End=====================================<]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- driver_close -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-23T10:39:14Z" finished-at="2019-04-23T10:39:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Hiremee_Automation_candidate_module_Home_page status=SUCCESS method=Hiremee_Smoke_Test_Driver_Initial.Hiremee_Automation_candidate_module_Home_page()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started.Hiremee_Smoke_Test_Driver_Initial@3c3c4a71]" name="teardown" is-config="true" duration-ms="0" started-at="2019-04-23T10:40:22Z" finished-at="2019-04-23T10:40:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Driver_Started.Hiremee_Smoke_Test_Driver_Initial -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Automation_Testing_Firefox_Browser -->
+  </suite> <!-- Hiremee_UAT_Smoke_Testing -->
 </testng-results>

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Hiremee_UAT_Smoke_Testing">
-  <test thread-count="5" name="Automation_Testing">
+<suite name="Hiremee_UAT_Smoke_Testing" parallel="none">
+     
+   <!-- Chrome Browser   -->
+  <test thread-count="20" name="Automation_Testing_Chrome_Browser" group-by-instances="true">
+  	<parameter name="browser" value="chrome"/>
     <classes>
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial"/>
     </classes>
   </test> <!-- Test -->
+  
+  
+   <!-- Firefox Browser -->
+  <test thread-count="20" name="Automation_Testing_Firefox_Browser" group-by-instances="true">
+  	<parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial"/>
+    </classes>
+  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
-
 
 

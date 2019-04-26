@@ -499,9 +499,9 @@ public class Hiremee_candidate_pages extends Hiremee_Smoke_Test_Driver_Initial
 			ExplicitWait(driver, Candidate_modal);
 			WebElement element=Candidate_modal;
 			Actions act=new Actions(driver);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			act.moveToElement(element).build().perform();
-			ExplicitWait(driver, Candidate_change_Password);
+			//ExplicitWait(driver, Candidate_change_Password);
 			Candidate_change_Password.click();
 			excel.Write_data_pass(1, 37, 11);
 			Thread.sleep(3000);
@@ -526,9 +526,9 @@ public class Hiremee_candidate_pages extends Hiremee_Smoke_Test_Driver_Initial
 			ExplicitWait(driver, Candidate_modal);
 			WebElement element1=Candidate_modal;
 			Actions act1=new Actions(driver);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			act1.moveToElement(element1).build().perform();
-			ExplicitWait(driver, Candidate_Logout);
+			//ExplicitWait(driver, Candidate_Logout);
 			Candidate_Logout.click();
 			excel.Write_data_pass(1, 38, 11);
 		}
