@@ -23,7 +23,7 @@ public class Company_Feedback_page extends Driver_Class{
 	@FindBy(how=How.ID,using="js_feedback")
 	WebElement Company_Feedback_submit_button;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_Feedback_success_pop_ub;
 	
 

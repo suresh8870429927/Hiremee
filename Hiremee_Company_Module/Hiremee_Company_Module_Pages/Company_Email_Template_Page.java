@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
 import Driver_Started_Company_Module.Driver_Class;
 import Excel_Sheet_config.Excel_Sheet;
 
@@ -25,7 +27,7 @@ public class Company_Email_Template_Page extends Driver_Class{
 	@FindBy(how=How.ID,using="corporate_email_tmp")
 	WebElement Email_template_save_template;	
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[7]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_Email_Template_success_popub;
 	
 	WebDriver driver;
@@ -36,7 +38,7 @@ public class Company_Email_Template_Page extends Driver_Class{
 		this.driver=ldriver;
 		PageFactory.initElements(driver, this);
 	}
-
+	@Test
 	public void Company_Email_Template() throws Exception
 	{
 		logger=extent.createTest("Company_Email_Template");

@@ -24,10 +24,10 @@ public class Recruiter_Search_Candidate_Page extends Recruiter_Driver_Class{
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/button[3]")
 	WebElement Recruiter_Search_Candidate_Search_Dotted_Button;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div/div[3]/div/div/div[2]/div/a[1]")
+	@FindBy(how=How.XPATH,using="//button[@class='dropdown-item search-select-multiple']")
 	WebElement Recruiter_Search_Candidate_Search_Select_candidate;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Recruiter_upload_success_popub;
 
 	WebDriver driver;
@@ -41,6 +41,7 @@ public class Recruiter_Search_Candidate_Page extends Recruiter_Driver_Class{
 	@Test
 	public void Search_candidate_page() throws Exception
 	{
+		logger=extent.createTest("Search_candidate_page");
 		try
 		{
 		//search candidate

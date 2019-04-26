@@ -239,13 +239,14 @@ public class College_Upload_Student_Details_Page extends College_Driver_Class
 		}
 	}		
 	@Test
+	
 	public void college_Candidate_OTP_Activation() throws Exception
 	{
 		logger=extent.createTest("college_Candidate_OTP_Activation");
 		try
 		{
 		Thread.sleep(3000);
-		College_Registration_OTP_Value.sendKeys(DB.College_Registration_otp);
+		College_Registration_OTP_Value.sendKeys(DB.College_Registration_otp_final);
 		Thread.sleep(3000);
 		College_Registration_OTP_Submit_Button.click();
 		Thread.sleep(3000);

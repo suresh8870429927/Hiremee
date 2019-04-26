@@ -29,8 +29,8 @@ public class Candidate_Login_Page extends Candidate_Driver_Class
 
 	WebDriver driver;
 	String Hiremee_candidate_url;
-	//String Email_id;
-	//String password;
+	String Email_id;
+	String password;
 	Excel_Sheet excel=new Excel_Sheet();
 	public Candidate_Login_Page(WebDriver l1driver)
 	{
@@ -45,18 +45,21 @@ public class Candidate_Login_Page extends Candidate_Driver_Class
 		try
 		{
 			//login-candidate
+			
 			Hiremee_candidate_url=excel.Read_data(1, 19, 11);
 			driver.get(Hiremee_candidate_url);
 			excel.Write_data_pass(1, 19, 12);
 			excel.Write_data_pass(1, 61, 12);
 			excel.Write_data_pass(1, 62, 12);
-			//Email_id=excel.Read_data(1, 65, 11);
-			Candidate_Email_ID.sendKeys(Candidate_Pooled_Campus_Registration_Page.Email_id);
+			Email_id=excel.Read_data(1, 65, 11);
+			Candidate_Email_ID.sendKeys(Email_id);
+			//Candidate_Email_ID.sendKeys(Candidate_Pooled_Campus_Registration_Page.Email_id);
 			excel.Write_data_pass(1, 63, 12);
 			excel.Write_data_pass(1, 64, 12);
 			excel.Write_data_pass(1, 65, 12);
-			//password=excel.Read_data(1, 67, 11);
-			Candidate_Password.sendKeys(Candidate_Pooled_Campus_Registration_Page.password);
+			password=excel.Read_data(1, 67, 11);
+			Candidate_Password.sendKeys(password);
+			//Candidate_Password.sendKeys(Candidate_Pooled_Campus_Registration_Page.password);
 			excel.Write_data_pass(1, 67, 12);
 			String candidate_login_captcha=JOptionPane.showInputDialog("Enter the answer for above captcha:");
 			candidate_Captcha_value.sendKeys(candidate_login_captcha);

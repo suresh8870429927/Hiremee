@@ -25,7 +25,7 @@ public class college_registration_Testcase
 		try 
 		{
 			obj_College_Registration_page.college_registration();
-			//obj_college_registration_activate_ops_portal.college_registration_activate_ops_portal();
+			obj_college_registration_activate_ops_portal.college_registration_activate_ops_portal();
 			
 		}
 		catch(Exception e)

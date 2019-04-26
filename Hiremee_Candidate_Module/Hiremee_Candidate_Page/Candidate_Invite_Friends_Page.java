@@ -22,7 +22,7 @@ public class Candidate_Invite_Friends_Page extends Candidate_Driver_Class
 	@FindBy(how=How.ID,using="btn_submit")
 	WebElement candidate_invite_friendS_Send_Invitation;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[15]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement candidate_success_popub;
 
 
@@ -51,7 +51,7 @@ public class Candidate_Invite_Friends_Page extends Candidate_Driver_Class
 			candidate_invite_friendS_Send_Invitation.click();
 			excel.Write_data_pass(1, 298, 12);
 			excel.Write_data_pass(1, 299, 12);
-			Thread.sleep(3000);
+			Thread.sleep(8000);
 			candidate_success_popub.click();
 		}
 		catch(Exception e)

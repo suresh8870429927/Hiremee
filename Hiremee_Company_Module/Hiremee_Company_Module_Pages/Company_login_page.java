@@ -48,9 +48,7 @@ public class Company_login_page extends Driver_Class
 		{
 			//company-login
 			url_hiremee_company_login=excel.Read_data(3, 54, 11);
-			System.out.println("1");
 			driver.get(url_hiremee_company_login);
-			System.out.println("2");
 			excel.Write_data_pass(3, 54, 12);
 			company_Email=excel.Read_data(3, 56, 11);
 			//Company_Email_ID.sendKeys(Comapany_Registration_Page.company_Email);

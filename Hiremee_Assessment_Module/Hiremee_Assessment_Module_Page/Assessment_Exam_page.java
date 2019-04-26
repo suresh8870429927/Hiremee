@@ -130,18 +130,23 @@ public class Assessment_Exam_page extends Candidate_Driver_Class{
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div/div/div/div/div[4]/button[1]")
 	WebElement Assessment_Exam_Group_Finish_Button;
 	
-	
 	@FindBy(how=How.XPATH,using="/html/body/div[3]/div[2]/div/div/div/div/div[4]/button[1]")
 	WebElement Assessment_Exam_Behaviour_Group_Finish_Button;
 
-	@FindBy(how=How.ID,using="rblIdQ12")
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/div[2]/div[2]/div/div[1]/div[3]/div/div/div/div/div/a[1]")
 	WebElement Assessment_Exam_Feedback_Question1;
 
-	@FindBy(how=How.ID,using="rblIdQ22")
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/div[2]/div[2]/div/div[1]/div[5]/div/div/div/div/div/a[1]")
 	WebElement Assessment_Exam_Feedback_Question2;
 
-	@FindBy(how=How.ID,using="rblIdQ32")
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/div[2]/div[2]/div/div[1]/div[7]/div/div/div/div/div/a[1]")
 	WebElement Assessment_Exam_Feedback_Question3;
+	
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/div[2]/div[2]/div/div[1]/div[9]/div/div/div/div/div/a[1]")
+	WebElement Assessment_Exam_Feedback_Question4;
+	
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/div[2]/div[2]/div/div[1]/div[11]/div/div/div/div/div/a[1]")
+	WebElement Assessment_Exam_Feedback_Question5;
 
 	@FindBy(how=How.ID,using="btnProceed")
 	WebElement Assessment_Exam_Feedback_overall_Finish_Button;
@@ -177,7 +182,7 @@ public class Assessment_Exam_page extends Candidate_Driver_Class{
 			excel.Write_data_pass(7, 19, 12);
 			Assessment_Exam_Username.sendKeys(Hiremee_id);
 			excel.Write_data_pass(7, 20, 12);
-			//password=excel.Read_data(7, 21, 11);
+			password=excel.Read_data(7, 21, 11);
 			Assessment_Exam_Password.sendKeys(password);
 			excel.Write_data_pass(7, 21, 12);
 			String Assessment_exam_captcha_value=JOptionPane.showInputDialog("Enter the captcha value");
@@ -261,10 +266,10 @@ public class Assessment_Exam_page extends Candidate_Driver_Class{
 			Thread.sleep(2000);
 			Assessment_Exam_Group_Verbal_Start_Button.click();
 			excel.Write_data_pass(7, 31, 12);
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			for(int i=1;i<=10;i++)
 			{
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				if (Assessment_Exam_Group_OptionA.isDisplayed())
 				{
 					Assessment_Exam_Group_OptionA.click();  
@@ -782,10 +787,16 @@ public class Assessment_Exam_page extends Candidate_Driver_Class{
 			excel.Write_data_pass(7, 54, 12);
 			Thread.sleep(3000);
 			Assessment_Exam_Group_overall_Finish_Button_ok_popub.click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			Assessment_Exam_Feedback_Question1.click();
+			Thread.sleep(3000);
 			Assessment_Exam_Feedback_Question2.click();
+			Thread.sleep(3000);
 			Assessment_Exam_Feedback_Question3.click();
+			Thread.sleep(3000);
+			Assessment_Exam_Feedback_Question4.click();
+			Thread.sleep(3000);
+			Assessment_Exam_Feedback_Question5.click();
 			excel.Write_data_pass(7, 55, 12);
 			Thread.sleep(1000);
 			Assessment_Exam_Feedback_overall_Finish_Button.click();

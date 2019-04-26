@@ -363,9 +363,7 @@ public class Assessment_Admin_College extends College_Driver_Class
 			//	driver.get(Assessment_admin_url);
 			Admin_Usermanagement.click();
 			Thread.sleep(1000);
-			
 			College_Exam_center=excel.Read_data(5, 29, 11);
-			
 			Admin_Ussermapping_College_campus.click();
 			excel.Write_data_pass(5, 50, 12);
 			Thread.sleep(2000);
@@ -387,7 +385,6 @@ public class Assessment_Admin_College extends College_Driver_Class
 			Admin_Ussermapping_Select_Degree_Checkbox.click();
 			excel.Write_data_pass(5, 52, 12);
 			Thread.sleep(3000);
-
 			Admin_Ussermapping_Select_Course_Dummy.click();
 			Thread.sleep(3000);
 			Admin_Ussermapping_Select_Course_Search.click();
@@ -397,7 +394,6 @@ public class Assessment_Admin_College extends College_Driver_Class
 			Thread.sleep(2000);
 			Admin_Ussermapping_Select_Course_Checkbox.click();
 			Thread.sleep(3000);
-
 			excel.Write_data_pass(5, 53, 12);
 			Admin_Ussermapping_Select_Specialization_Dummy.click();
 			Thread.sleep(3000);
@@ -409,8 +405,6 @@ public class Assessment_Admin_College extends College_Driver_Class
 			Admin_Ussermapping_Select_Specialization_Checkbox.click();
 			excel.Write_data_pass(5, 54, 12);
 			Thread.sleep(2000);
-
-
 			Admin_Ussermapping_Select_Year_Dummy.click();
 			Thread.sleep(2000);
 			Admin_Ussermapping_Select_Year_Search.click();
@@ -423,8 +417,7 @@ public class Assessment_Admin_College extends College_Driver_Class
 			excel.Write_data_pass(5, 55, 12);
 			Admin_Ussermapping_Select_Search.click();
 			excel.Write_data_pass(5, 56, 12);
-			Thread.sleep(5000);
-
+			Thread.sleep(8000);
 			Hiremee_id=Hiremee_id_details.getText();
 			System.out.println("HireMee Id:" + Hiremee_id);
 			Admin_Ussermapping_College_Mapping_Checkbox.click();

@@ -63,11 +63,17 @@ public class Candidate_Pooled_Campus_Registration_Page extends Candidate_Driver_
 
 	WebDriver driver;
 	String pooled_Url;
+	
+	//need to hide
 	//String Exam_center;	
+	
 	String F_name;
 	String Mobile_number;
 	public static String Email_id;
-	//public static String password;
+	
+	//need to hide
+	//String password;
+	 
 	String Course_Type;
 	String Course;
 	String Specialization;
@@ -81,6 +87,7 @@ public class Candidate_Pooled_Campus_Registration_Page extends Candidate_Driver_
 		PageFactory.initElements(driver,this);
 	}
 	@Test
+	
 	public void pooled_campus_registration() throws Exception
 	{
 		logger=extent.createTest("pooled_campus_registration");
@@ -91,7 +98,6 @@ public class Candidate_Pooled_Campus_Registration_Page extends Candidate_Driver_
 			excel.Write_data_pass(6, 19, 12);
 			Exam_center_id.click();
 			ExplicitWait(driver, Registration_input_dropdown_class_name);
-			//Exam_center=excel.Read_data(6, 20, 11);
 			Registration_input_dropdown_class_name.sendKeys(Assessment_Admin_Page.Exam_center);
 			ExplicitWait(driver, Registration_input_dropdown_class_name);
 			Registration_input_dropdown_class_name.sendKeys(Keys.ENTER);
@@ -180,17 +186,18 @@ public class Candidate_Pooled_Campus_Registration_Page extends Candidate_Driver_
 		}
 	}
 	@Test
+	
 	public void Registration_OTP_Verification() throws Exception
 	{
 		logger=extent.createTest("Registration_OTP_Verification");
 		try
 		{
 		Thread.sleep(3000);
-		System.out.println(DB.Registration_otp);
+		System.out.println(DB.pooled_otp_final);
 		excel.Write_data_pass(6, 32, 12);
 		excel.Write_data_pass(6, 33, 12);
 		excel.Write_data_pass(6, 34, 12);
-		Registration_OTP_Code.sendKeys(DB.Registration_otp);
+		Registration_OTP_Code.sendKeys(DB.pooled_otp_final);
 		Thread.sleep(3000);
 		Registration_OTP_Verify_submit_button.click();
 		excel.Write_data_pass(6, 35, 12);

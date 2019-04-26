@@ -34,7 +34,7 @@ public class Recruiter_dashboard_page extends Recruiter_Driver_Class
 	@FindBy(how=How.ID,using="update")
 	WebElement Recruiter_Profile_Update_Button;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Recruiter_upload_success_popub;
 
 	@FindBy(how=How.ID,using="file")

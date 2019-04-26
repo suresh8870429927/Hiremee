@@ -3,16 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Driver_Started_Candidate_Module.Candidate_Driver_Class">
+      <class name="Driver_Started_College_Module.College_Driver_Class">
         <methods>
-          <include name="Candidate_Assessment_Exam_Testcase"/>
           <include name="Start_driver"/>
           <include name="driver_close"/>
-          <include name="startReport"/>
+          <include name="College_Dashboard_Testcase"/>
+          <include name="College_feedback_Tescase"/>
+          <include name="College_login_Testcase"/>
+          <include name="College_profile_Testcase"/>
+          <include name="College_registered_students_details_Testcase"/>
           <include name="teardown"/>
+          <include name="college_Assessment_Exam_Center_creation"/>
           <include name="getResult"/>
+          <include name="college_Assessment_Exam_Halticket_Update"/>
+          <include name="college_Assessment_Exam_Candidate"/>
+          <include name="College_assessment_scores_Testcase"/>
+          <include name="College_registration_Testcase"/>
+          <include name="College_upload_student_details_Testcase"/>
+          <include name="startReport"/>
+          <include name="College_Change_password_Testcase"/>
         </methods>
-      </class> <!-- Driver_Started_Candidate_Module.Candidate_Driver_Class -->
+      </class> <!-- Driver_Started_College_Module.College_Driver_Class -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

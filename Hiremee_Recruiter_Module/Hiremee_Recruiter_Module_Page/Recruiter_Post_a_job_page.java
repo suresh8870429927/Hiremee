@@ -58,7 +58,7 @@ public class Recruiter_Post_a_job_page extends Recruiter_Driver_Class{
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/form/div[3]/div[3]/div/div/input")
 	WebElement Company_post_a_Job_Last_update_date_picker;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[5]/div/div[2]/button[4]")
+	@FindBy(how=How.XPATH,using="/html/body/div[12]/div/div[2]/button[4]")
 	WebElement Company_post_a_Job_Last_date_apply_ok_button;
 
 	@FindBy(how=How.ID,using="js-job-draft-button")
@@ -82,9 +82,9 @@ public class Recruiter_Post_a_job_page extends Recruiter_Driver_Class{
 	}
 
 	@Test
-	public void company_Post_a_job() throws Exception
+	public void Recruiter_Post_a_job() throws Exception
 	{
-		logger=extent.createTest("company_Post_a_job");
+		logger=extent.createTest("Recruiter_Post_a_job");
 		try
 		{
 			//jobs-first page

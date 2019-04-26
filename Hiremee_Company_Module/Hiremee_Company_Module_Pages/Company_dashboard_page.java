@@ -64,7 +64,7 @@ public class Company_dashboard_page extends Driver_Class
 	@FindBy(how=How.XPATH,using="/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/form/div/div[2]/input")
 	WebElement Company_Profile_profile_image_upload_button;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_upload_success_popub;
 
 	@FindBy(how=How.ID,using="js-video_title")

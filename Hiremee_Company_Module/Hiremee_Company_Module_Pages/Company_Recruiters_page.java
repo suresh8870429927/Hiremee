@@ -28,7 +28,7 @@ public class Company_Recruiters_page extends Driver_Class{
 	@FindBy(how=How.ID,using="recruiter-invite-send")
 	WebElement company_recruiter_Invite_send_button;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[15]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_upload_success_popub;
 
 	//mailtrap
@@ -105,6 +105,7 @@ public class Company_Recruiters_page extends Driver_Class{
 	
 	WebDriver driver;
 	//mailtrap-details
+	
 	String Mailtrap_url="https://mailtrap.io/signin";
 	String Email = "surv5e11606@gmail.com";
 	String Pwd = "Temp!123";

@@ -38,7 +38,7 @@ public class Recruiter_All_Shortlisted_Candidate_Page extends Recruiter_Driver_C
 	@FindBy(how=How.NAME,using="allcandidate_date")
 	WebElement Company_All_Candidate_date_picker;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[5]/div/div[2]/button[4]")
+	@FindBy(how=How.XPATH,using="/html/body/div[16]/div/div[2]/button[4]")
 	WebElement Company_All_Candidate_date_picker_Ok_button;
 
 	@FindBy(how=How.ID,using="select2-js-type-search_name-container")
@@ -59,9 +59,8 @@ public class Recruiter_All_Shortlisted_Candidate_Page extends Recruiter_Driver_C
 	@FindBy(how=How.ID,using="send-selected-email")
 	WebElement Company_All_Candidate_Shortlisted_Email_send_button;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[7]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_sendmail_success_popub;
-	
 
 	@FindBy(how=How.ID,using="js_invited")
 	WebElement Company_All_Candidate_Hired_Button;
@@ -243,6 +242,8 @@ public class Recruiter_All_Shortlisted_Candidate_Page extends Recruiter_Driver_C
 			Thread.sleep(3000);
 			Company_All_Candidate_Hired_Button.click();
 			excel.Write_data_pass(4, 110, 12);
+			Thread.sleep(3000);
+			Company_sendmail_success_popub.click();
 			Thread.sleep(3000);
 			Company_sendmail_success_popub.click();
 		}

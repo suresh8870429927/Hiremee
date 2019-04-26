@@ -29,7 +29,7 @@ public class Company_Change_password_Page extends Driver_Class
 	@FindBy(how=How.ID,using="js-change-password")
 	WebElement Company_Change_password_Button;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_success_popub;
 	
 	

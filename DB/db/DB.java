@@ -4,6 +4,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -11,9 +14,10 @@ import org.testng.annotations.Test;
 
 public class DB {
 	WebDriver driver;
-	public static String Registration_otp;
+	String Registration_otp;
+	public static String pooled_otp_final;
 	public static String College_Registration_otp;
-	
+	public static String College_Registration_otp_final;
 	public DB(WebDriver ldriver)
 	{
 		this.driver=ldriver;
@@ -33,12 +37,13 @@ public class DB {
 		System.out.println("pooled otp got");
 		while (rs.next()) {
 			Registration_otp=rs.getString("otp");
-			System.out.println(Registration_otp);
+			 pooled_otp_final= Registration_otp.replaceAll("[^0-9]", "");
+			 System.out.println(pooled_otp_final);
+			
 		}
-		System.out.println("pooled otp end");
 		con.close();
 	}
-	
+
 	//college-candidate Registration
 	@Test
 	public void college_invitecandidate_selectquery_otp() throws SQLException, ClassNotFoundException
@@ -52,31 +57,32 @@ public class DB {
 		ResultSet rs = st.executeQuery(select_query);
 		while (rs.next()) {
 			College_Registration_otp=rs.getString("otp");
-			System.out.println(College_Registration_otp);
+			College_Registration_otp_final= College_Registration_otp.replaceAll("[^0-9]", "");
+			System.out.println(College_Registration_otp_final);
 		}
 		con.close();
 
 	}
-	
+
 	@Test
 	// college Activation
-		public void college_registration_activate_ops_portal() throws SQLException, ClassNotFoundException
-		{
-			String dbURL = "jdbc:sqlserver://172.18.1.88:1433;databaseName=hiremee";
-			String username = "itdev";
-			String password = "Temp@123";
-			Connection con = DriverManager.getConnection(dbURL,username,password);
-			Statement st = con.createStatement();
-			String select_query = "update collegeregistration set status='active' where id=(select top (1)  id from collegeregistration order by id desc)";
-			ResultSet rs=st.executeQuery(select_query);
-			while (rs.next()) {
-				System.out.println(rs.getString(select_query));
-			}
-			con.close();
-			System.out.println("exceuted");
-
+	public void college_registration_activate_ops_portal() throws SQLException, ClassNotFoundException
+	{
+		String dbURL = "jdbc:sqlserver://172.18.1.88:1433;databaseName=hiremee";
+		String username = "itdev";
+		String password = "Temp@123";
+		Connection con = DriverManager.getConnection(dbURL,username,password);
+		Statement st = con.createStatement();
+		String select_query = "update collegeregistration set status='active' where id=(select top (1)  id from collegeregistration order by id desc)";
+		ResultSet rs=st.executeQuery(select_query);
+		while (rs.next()) {
+			System.out.println(rs.getString(select_query));
 		}
-	
+		con.close();
+		System.out.println("exceuted");
+
+	}
+
 	//company module
 	@Test
 	//needs to alternation in this 
@@ -92,7 +98,7 @@ public class DB {
 		st.executeQuery(select_query);
 		con.close();
 	}
-	
+
 	@Test
 	//needs to alternation in this 
 	public void company_limit_update_ops_portal() throws SQLException, ClassNotFoundException
@@ -108,7 +114,7 @@ public class DB {
 		con.close();
 
 	}
-	
+
 	@Test
 	//Assessment
 	public void Assessment_College_Halticket_Update() throws SQLException, ClassNotFoundException
@@ -122,22 +128,22 @@ public class DB {
 		st.executeQuery(select_query);
 		con.close();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 

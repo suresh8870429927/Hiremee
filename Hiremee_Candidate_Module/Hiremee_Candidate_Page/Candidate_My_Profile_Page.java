@@ -343,7 +343,7 @@ public class Candidate_My_Profile_Page extends Candidate_Driver_Class{
 		excel.Write_data_pass(1, 209, 12);
 		Thread.sleep(2000);
 		Candidate_Popub_success.click();
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		Candidate_Choose_Profile_picture.click();
 		excel.Write_data_pass(1, 229, 12);
 		s.wait(fileInputTextBox,10);	

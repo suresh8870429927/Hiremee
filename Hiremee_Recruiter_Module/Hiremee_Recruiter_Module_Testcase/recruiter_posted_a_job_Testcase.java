@@ -21,7 +21,7 @@ public class recruiter_posted_a_job_Testcase {
 		{
 		//post a job
 		obj_recruiter_Post_a_job=new Recruiter_Post_a_job_page(driver);
-		obj_recruiter_Post_a_job.company_Post_a_job();
+		obj_recruiter_Post_a_job.Recruiter_Post_a_job();
 		}
 		catch(Exception e)
 		{

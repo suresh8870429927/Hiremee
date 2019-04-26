@@ -26,7 +26,7 @@ public class Recruiter_Email_Template_Page extends Recruiter_Driver_Class{
 	@FindBy(how=How.ID,using="corporate_email_tmp")
 	WebElement Email_template_save_template;	
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[7]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Recruiter_Email_Template_success_popub;
 	
 	WebDriver driver;

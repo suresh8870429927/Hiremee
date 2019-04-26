@@ -62,7 +62,7 @@ public class Comapany_Registration_Page  extends Driver_Class
 	@FindBy(how=How.ID,using="login_submit")
 	WebElement ops_login_submit;
 
-	@FindBy(how=How.XPATH,using="/html/body/section/aside/ul/li[9]/a")
+	@FindBy(how=How.LINK_TEXT,using="Company Details")
 	WebElement ops_company_details;
 
 	@FindBy(how=How.XPATH,using="/html/body/section/section/div/div/div/div[2]/div[1]/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[6]/div/label[2]")
@@ -107,6 +107,10 @@ public class Comapany_Registration_Page  extends Driver_Class
 	static String company_Password;
 	String company_Website;
 	String company_spoc;
+	
+	//Negative Inputs
+	static String company_negative_Inputs;
+	
 	//ops portal
 	String hiremee_url_opsportal="http://172.18.1.87:82/";
 	String ops_portal_username="pjxraj@gmail.com";
@@ -220,7 +224,7 @@ public class Comapany_Registration_Page  extends Driver_Class
 					ops_company_Activation_notes.sendKeys("Automation Team");
 					Thread.sleep(3000);
 					ops_company_Activation_submit.click();
-					Thread.sleep(3000);
+					Thread.sleep(7000);
 					/*
 					ops_company_Edit.click();
 					Thread.sleep(3000);

@@ -30,7 +30,7 @@ public class Recruiter_Change_password_Page extends Recruiter_Driver_Class
 	@FindBy(how=How.ID,using="js-change-password")
 	WebElement Recruiter_Change_password_Button;
 	
-	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Recruiter_success_popub;
 	
 	WebDriver driver;

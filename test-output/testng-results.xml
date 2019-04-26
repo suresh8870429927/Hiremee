@@ -1,44 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="227823" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:20:37Z">
+  <suite name="Default suite" duration-ms="240160" started-at="2019-04-25T13:37:30Z" finished-at="2019-04-25T13:41:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="227823" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:20:37Z">
-      <class name="Driver_Started_Candidate_Module.Candidate_Driver_Class">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="startReport" is-config="true" duration-ms="1434" started-at="2019-04-12T13:16:48Z" finished-at="2019-04-12T13:16:49Z">
+    <test name="Default test" duration-ms="240160" started-at="2019-04-25T13:37:30Z" finished-at="2019-04-25T13:41:31Z">
+      <class name="Driver_Started_College_Module.College_Driver_Class">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="startReport" is-config="true" duration-ms="1442" started-at="2019-04-25T13:37:29Z" finished-at="2019-04-25T13:37:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="Start_driver" is-config="true" duration-ms="8477" started-at="2019-04-12T13:16:49Z" finished-at="2019-04-12T13:16:58Z">
+        <test-method status="PASS" signature="Start_driver()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="Start_driver" is-config="true" duration-ms="3812" started-at="2019-04-25T13:37:30Z" finished-at="2019-04-25T13:37:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Start_driver -->
-        <test-method status="PASS" signature="Candidate_Assessment_Exam_Testcase()[pri:3, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="Candidate_Assessment_Exam_Testcase" duration-ms="215718" started-at="2019-04-12T13:16:58Z" finished-at="2019-04-12T13:20:34Z">
+        <test-method status="PASS" signature="College_registration_Testcase()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_registration_Testcase" duration-ms="36386" started-at="2019-04-25T13:37:34Z" finished-at="2019-04-25T13:38:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Candidate_Assessment_Exam_Testcase -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="getResult" is-config="true" duration-ms="8" started-at="2019-04-12T13:20:34Z" finished-at="2019-04-12T13:20:34Z">
+        </test-method> <!-- College_registration_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="10" started-at="2019-04-25T13:38:11Z" finished-at="2019-04-25T13:38:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Candidate_Assessment_Exam_Testcase status=SUCCESS method=Candidate_Driver_Class.Candidate_Assessment_Exam_Testcase()[pri:3, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f] output={null}]]]>
+                <![CDATA[[TestResult name=College_registration_Testcase status=SUCCESS method=College_Driver_Class.College_registration_Testcase()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="driver_close" is-config="true" duration-ms="3604" started-at="2019-04-12T13:20:34Z" finished-at="2019-04-12T13:20:37Z">
+        <test-method status="PASS" signature="College_login_Testcase()[pri:1, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_login_Testcase" duration-ms="5875" started-at="2019-04-25T13:38:11Z" finished-at="2019-04-25T13:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_login_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="1" started-at="2019-04-25T13:38:17Z" finished-at="2019-04-25T13:38:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_login_Testcase status=SUCCESS method=College_Driver_Class.College_login_Testcase()[pri:1, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_Dashboard_Testcase()[pri:2, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_Dashboard_Testcase" duration-ms="9763" started-at="2019-04-25T13:38:17Z" finished-at="2019-04-25T13:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_Dashboard_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:38:26Z" finished-at="2019-04-25T13:38:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_Dashboard_Testcase status=SUCCESS method=College_Driver_Class.College_Dashboard_Testcase()[pri:2, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_profile_Testcase()[pri:3, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_profile_Testcase" duration-ms="36171" started-at="2019-04-25T13:38:26Z" finished-at="2019-04-25T13:39:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_profile_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:39:02Z" finished-at="2019-04-25T13:39:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_profile_Testcase status=SUCCESS method=College_Driver_Class.College_profile_Testcase()[pri:3, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_upload_student_details_Testcase()[pri:4, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_upload_student_details_Testcase" duration-ms="4205" started-at="2019-04-25T13:39:02Z" finished-at="2019-04-25T13:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_upload_student_details_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:39:07Z" finished-at="2019-04-25T13:39:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_upload_student_details_Testcase status=SUCCESS method=College_Driver_Class.College_upload_student_details_Testcase()[pri:4, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="college_Assessment_Exam_Center_creation()[pri:5, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="college_Assessment_Exam_Center_creation" duration-ms="7763" started-at="2019-04-25T13:39:07Z" finished-at="2019-04-25T13:39:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- college_Assessment_Exam_Center_creation -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:39:14Z" finished-at="2019-04-25T13:39:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=college_Assessment_Exam_Center_creation status=SUCCESS method=College_Driver_Class.college_Assessment_Exam_Center_creation()[pri:5, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="college_Assessment_Exam_Halticket_Update()[pri:6, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="college_Assessment_Exam_Halticket_Update" duration-ms="302" started-at="2019-04-25T13:39:14Z" finished-at="2019-04-25T13:39:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- college_Assessment_Exam_Halticket_Update -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:39:15Z" finished-at="2019-04-25T13:39:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=college_Assessment_Exam_Halticket_Update status=SUCCESS method=College_Driver_Class.college_Assessment_Exam_Halticket_Update()[pri:6, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="college_Assessment_Exam_Candidate()[pri:7, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="college_Assessment_Exam_Candidate" duration-ms="10074" started-at="2019-04-25T13:39:15Z" finished-at="2019-04-25T13:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- college_Assessment_Exam_Candidate -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="1" started-at="2019-04-25T13:39:25Z" finished-at="2019-04-25T13:39:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=college_Assessment_Exam_Candidate status=SUCCESS method=College_Driver_Class.college_Assessment_Exam_Candidate()[pri:7, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_registered_students_details_Testcase()[pri:8, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_registered_students_details_Testcase" duration-ms="32059" started-at="2019-04-25T13:39:25Z" finished-at="2019-04-25T13:39:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_registered_students_details_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="1" started-at="2019-04-25T13:39:57Z" finished-at="2019-04-25T13:39:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_registered_students_details_Testcase status=SUCCESS method=College_Driver_Class.College_registered_students_details_Testcase()[pri:8, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_assessment_scores_Testcase()[pri:9, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_assessment_scores_Testcase" duration-ms="30446" started-at="2019-04-25T13:39:57Z" finished-at="2019-04-25T13:40:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_assessment_scores_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:40:27Z" finished-at="2019-04-25T13:40:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_assessment_scores_Testcase status=SUCCESS method=College_Driver_Class.College_assessment_scores_Testcase()[pri:9, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_Change_password_Testcase()[pri:10, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_Change_password_Testcase" duration-ms="30686" started-at="2019-04-25T13:40:27Z" finished-at="2019-04-25T13:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_Change_password_Testcase -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="1" started-at="2019-04-25T13:40:58Z" finished-at="2019-04-25T13:40:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_Change_password_Testcase status=SUCCESS method=College_Driver_Class.College_Change_password_Testcase()[pri:10, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="College_feedback_Tescase()[pri:11, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="College_feedback_Tescase" duration-ms="31668" started-at="2019-04-25T13:40:58Z" finished-at="2019-04-25T13:41:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- College_feedback_Tescase -->
+        <test-method status="PASS" signature="driver_close()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="driver_close" is-config="true" duration-ms="908" started-at="2019-04-25T13:41:30Z" finished-at="2019-04-25T13:41:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driver_close -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started_Candidate_Module.Candidate_Driver_Class@5e5d171f]" name="teardown" is-config="true" duration-ms="11307" started-at="2019-04-12T13:20:37Z" finished-at="2019-04-12T13:20:49Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="getResult" is-config="true" duration-ms="0" started-at="2019-04-25T13:41:30Z" finished-at="2019-04-25T13:41:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=College_feedback_Tescase status=SUCCESS method=College_Driver_Class.College_feedback_Tescase()[pri:11, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Driver_Started_College_Module.College_Driver_Class@41a2befb]" name="teardown" is-config="true" duration-ms="9042" started-at="2019-04-25T13:41:31Z" finished-at="2019-04-25T13:41:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Driver_Started_Candidate_Module.Candidate_Driver_Class -->
+      </class> <!-- Driver_Started_College_Module.College_Driver_Class -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

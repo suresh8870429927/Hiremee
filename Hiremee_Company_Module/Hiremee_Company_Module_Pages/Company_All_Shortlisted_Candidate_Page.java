@@ -37,7 +37,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 	@FindBy(how=How.ID,using="js-corp-allcandidate-date")
 	WebElement Company_All_Candidate_date_picker;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[5]/div/div[2]/button[4]")
+	@FindBy(how=How.XPATH,using="/html/body/div[16]/div/div[2]/button[4]")
 	WebElement Company_All_Candidate_date_picker_Ok_button;
 
 	@FindBy(how=How.ID,using="select2-js-type-search_name-container")
@@ -58,10 +58,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 	@FindBy(how=How.ID,using="send-selected-email")
 	WebElement Company_All_Candidate_Shortlisted_Email_send_button;
 
-	@FindBy(how=How.XPATH,using="/html/body/div[15]/div[7]/div/button")
-	WebElement Company_upload_success_popub;
-	
-	@FindBy(how=How.XPATH,using="/html/body/div[7]/div[7]/div/button")
+	@FindBy(how=How.XPATH,using="//button[@class='confirm']")
 	WebElement Company_sendmail_success_popub;
 	
 	@FindBy(how=How.ID,using="js_invited")
@@ -76,8 +73,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 	String email_subject;
 	String profile_type_invite;
 	Excel_Sheet excel=new Excel_Sheet();
-	//String job_url="http://172.18.1.87:81/email/shortlisted";
-	String job_url="http://dev.hiremee.co.in/email/shortlisted";
+	String job_url="http://172.18.1.87:81/email/shortlisted";
 
 	public Company_All_Shortlisted_Candidate_Page(WebDriver ldriver)
 	{
@@ -205,6 +201,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 			logger=extent.createTest("Candidate_Invite_Hire");
 			try
 			{
+				
 			//candidate--all candidate---invited and hire
 			Thread.sleep(3000);
 			Company_Candidate_Search_type_dropdown.click();
@@ -262,6 +259,8 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 			excel.Write_data_pass(3, 171, 12);
 			excel.Write_data_pass(3, 172, 12);
 			excel.Write_data_pass(3, 173, 12);
+			Thread.sleep(3000);
+			Company_sendmail_success_popub.click();
 			Thread.sleep(3000);
 			Company_sendmail_success_popub.click();
 		}
