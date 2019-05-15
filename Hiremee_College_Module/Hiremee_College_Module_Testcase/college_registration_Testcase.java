@@ -24,9 +24,7 @@ public class college_registration_Testcase
 		obj_college_registration_activate_ops_portal=new DB(driver);
 		try 
 		{
-			obj_College_Registration_page.college_registration();
-			obj_college_registration_activate_ops_portal.college_registration_activate_ops_portal();
-			
+			obj_College_Registration_page.college_registration();	
 		}
 		catch(Exception e)
 		{

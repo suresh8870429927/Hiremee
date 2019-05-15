@@ -21,6 +21,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -82,8 +83,8 @@ public class Recruiter_Driver_Class {
 		extent.attachReporter(smoke_testing);
 		extent.setSystemInfo("Host Name", "Regression_Testing");
 		extent.setSystemInfo("Environment", "UAT");
-		extent.setSystemInfo("User Name", "Automation Tester");
-		smoke_testing.config().setDocumentTitle("Hiremee_Web_Portal_UAT_recruiter_module_Regression_Testing");
+		extent.setSystemInfo("User Name", "Automation Team");
+		smoke_testing.config().setDocumentTitle("Hiremee_9.1_Web_Portal_UAT_recruiter_module_Regression_Testing");
 		smoke_testing.config().setReportName("Hiremee_Execution_Report");		
 		smoke_testing.config().setTheme(Theme.DARK);
 	}
@@ -330,12 +331,16 @@ public class Recruiter_Driver_Class {
 		email.setAuthenticator(new DefaultAuthenticator("irudayaraj.n@veetechnologies.com", "Geri%9r%rREw"));
 		email.setSSLOnConnect(true);
 		email.setFrom("irudayaraj.n@veetechnologies.com");
-		email.setSubject("HireMee_9.1_QA_Cycle-2_Regression_Testing_Extent_Report");
-		//email.addTo("irudayaraj.n@veetechnologies.com");
+		email.setSubject("HireMee_9.1_UAT_Recruiter_Module_Regression_Testing_Extent_Report");
 		email.addTo("suresh.k@veetechnologies.com");
-		//email.addCc("arunkumar.a@veetechnologies.com");
-		//email.addCc("udhayakumar.n@veetechnologies.com");
-		//email.addCc("senthilkumar.t@veetechnologies.com");
+	
+	
+		email.addTo("irudayaraj.n@veetechnologies.com");
+		/*
+		email.addCc("arunkumar.a@veetechnologies.com");
+		email.addCc("udhayakumar.n@veetechnologies.com");
+		email.addCc("senthilkumar.t@veetechnologies.com");*/
+		
 		//mail attachement
 		EmailAttachment attachment = new EmailAttachment();
 		//attachment.setPath("./HireMee_Pro_Smoke_Report.zip");
@@ -344,7 +349,7 @@ public class Recruiter_Driver_Class {
 		email.attach(attachment);
 		email.setHtmlMsg(htmlEmailTemplate);
 		email.send();
-		System.out.println("Mail Send Sucessfully");
+		Reporter.log("<-------------------------------------------------------------------------------Mail Send Successfully--------------------------------------------------------------------------------->",true);
 
 	}
 

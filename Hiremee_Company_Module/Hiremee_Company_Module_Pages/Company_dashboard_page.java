@@ -179,7 +179,7 @@ public class Company_dashboard_page extends Driver_Class
 		excel.Write_data_pass(3, 344, 12);
 		Company_Profile_profile_image_upload_button.click();
 		excel.Write_data_pass(3, 345, 12);
-		Thread.sleep(15000);
+		Thread.sleep(10000);
 		ExplicitWait(driver, Company_upload_success_popub);
 		Company_upload_success_popub.click();
 		//video profile update

@@ -73,7 +73,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 	String email_subject;
 	String profile_type_invite;
 	Excel_Sheet excel=new Excel_Sheet();
-	String job_url="http://172.18.1.87:81/email/shortlisted";
+	static String job_url;
 
 	public Company_All_Shortlisted_Candidate_Page(WebDriver ldriver)
 	{
@@ -169,6 +169,7 @@ public class Company_All_Shortlisted_Candidate_Page extends Driver_Class{
 					Thread.sleep(3000);
 					driver.switchTo().window(child1);
 					Thread.sleep(5000);
+					job_url=excel.Read_data(3, 130, 11);
 					driver.get(job_url);
 					Thread.sleep(15000);
 					driver.close();

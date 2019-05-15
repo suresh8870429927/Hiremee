@@ -23,6 +23,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -93,9 +94,9 @@ public class Candidate_Driver_Class {
 		extent = new ExtentReports ();
 		extent.attachReporter(Regression_testing);
 		extent.setSystemInfo("Host Name", "Regression_Testing");
-		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("User Name", "Automation Tester");
-		Regression_testing.config().setDocumentTitle("Hiremee_Web_Portal_QA_Cycle-2_candidate_module_Regression_Testing");
+		extent.setSystemInfo("Environment", "UAT");
+		extent.setSystemInfo("User Name", "Automation Team");
+		Regression_testing.config().setDocumentTitle("Hiremee_9.1_Web_Portal_UAT_candidate_module_Regression_Testing");
 		Regression_testing.config().setReportName("Hiremee_Execution_Report");		
 		Regression_testing.config().setTheme(Theme.DARK);
 	}
@@ -285,7 +286,7 @@ public class Candidate_Driver_Class {
 		}
 		catch(Exception e)
 		{
-			throw(e);
+			//throw(e);
 		}
 	}*/
 
@@ -452,12 +453,14 @@ public class Candidate_Driver_Class {
 		email.setAuthenticator(new DefaultAuthenticator("irudayaraj.n@veetechnologies.com", "Geri%9r%rREw"));
 		email.setSSLOnConnect(true);
 		email.setFrom("irudayaraj.n@veetechnologies.com");
-		email.setSubject("HireMee_9.1_QA_Cycle-2_Regression_Testing_Extent_Report");
-		email.addTo("irudayaraj.n@veetechnologies.com");
+		email.setSubject("HireMee_9.1_Web_Portal_UAT_Candidate_Module_Regression_Testing_Extent_Report");
 		email.addTo("suresh.k@veetechnologies.com");
+		
+		email.addTo("irudayaraj.n@veetechnologies.com");
+		/*
 		email.addCc("arunkumar.a@veetechnologies.com");
 		email.addCc("udhayakumar.n@veetechnologies.com");
-		email.addCc("senthilkumar.t@veetechnologies.com");
+		email.addCc("senthilkumar.t@veetechnologies.com");*/
 		//mail attachement
 		EmailAttachment attachment = new EmailAttachment();
 		//attachment.setPath("./HireMee_Pro_Smoke_Report.zip");
@@ -466,7 +469,7 @@ public class Candidate_Driver_Class {
 		email.attach(attachment);
 		email.setHtmlMsg(htmlEmailTemplate);
 		email.send();
-		System.out.println("Mail Send Sucessfully");
+		Reporter.log("<-------------------------------------------------------------------------------Mail Send Successfully--------------------------------------------------------------------------------->",true);
 
 	}
 

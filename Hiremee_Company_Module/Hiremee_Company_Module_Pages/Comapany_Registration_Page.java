@@ -112,7 +112,7 @@ public class Comapany_Registration_Page  extends Driver_Class
 	static String company_negative_Inputs;
 	
 	//ops portal
-	String hiremee_url_opsportal="http://172.18.1.87:82/";
+	String hiremee_url_opsportal="http://devopsportal.hiremee.co.in/";
 	String ops_portal_username="pjxraj@gmail.com";
 	String ops_portal_password="Temp@123";
 

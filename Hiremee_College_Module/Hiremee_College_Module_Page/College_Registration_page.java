@@ -1,5 +1,9 @@
 package Hiremee_College_Module_Page;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Set;
+
 import javax.swing.JOptionPane;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -53,7 +57,6 @@ public class College_Registration_page extends College_Driver_Class
 	@FindBy(how=How.NAME,using="address")
 	WebElement college_address;
 
-
 	@FindBy(how=How.NAME,using="v_captcha")
 	WebElement college_captcha_value;
 
@@ -62,6 +65,31 @@ public class College_Registration_page extends College_Driver_Class
 
 	@FindBy(how=How.ID,using="js-college-register")
 	WebElement college_Register_submit;
+	
+	//ops portal
+	@FindBy(how=How.ID,using="email")
+	WebElement Opsportal_email_id;
+
+	@FindBy(how=How.ID,using="password")
+	WebElement Opsportal_password;
+
+	@FindBy(how=How.ID,using="captcha")
+	WebElement ops_captcha_value;
+
+	@FindBy(how=How.ID,using="login_submit")
+	WebElement ops_login_submit;
+
+	@FindBy(how=How.XPATH,using="/html/body/section/aside/ul/li[11]/a")
+	WebElement ops_college_details;
+
+	@FindBy(how=How.XPATH,using="/html/body/section/section/div/div/div/div[2]/div[1]/div/div/div[3]/div[2]/table/tbody/tr[1]/td[1]/div/label[2]")
+	WebElement ops_college_activation_status;
+
+	@FindBy(how=How.NAME,using="adnote")
+	WebElement ops_college_Activation_notes;
+
+	@FindBy(how=How.ID,using="clg_active")
+	WebElement ops_college_Activation_submit;
 
 	WebDriver driver;
 	//web portal
@@ -76,6 +104,12 @@ public class College_Registration_page extends College_Driver_Class
 	String Password;
 	String Confirm_Password;
 	String Address;
+	
+	//ops portal
+	String ops_portal_username="pjxraj@gmail.com";
+	String ops_portal_password="Temp@123";
+	String hiremee_url_opsportal="http://devopsportal.hiremee.co.in/";
+		
 	Excel_Sheet excel=new Excel_Sheet();
 	public College_Registration_page(WebDriver ldriver) 
 	{
@@ -142,7 +176,43 @@ public class College_Registration_page extends College_Driver_Class
 			college_Register_submit.click();
 			excel.Write_data_pass(2, 57, 12);
 			excel.Write_data_pass(2, 58, 12);
-			Thread.sleep(8000);
+			Thread.sleep(15000);
+			//ops approver company
+			String parent=driver.getWindowHandle();
+			Robot a=new Robot();
+			a.keyPress(KeyEvent.VK_CONTROL);
+			a.keyPress(KeyEvent.VK_T);
+			a.keyRelease(KeyEvent.VK_CONTROL);
+			a.keyRelease(KeyEvent.VK_T);
+			Set<String>s1=driver.getWindowHandles();
+			//int count=s1.size();
+			for(String child:s1) {
+				if(!parent.equalsIgnoreCase(child))
+				{
+					Thread.sleep(3000);
+					driver.switchTo().window(child);
+					Thread.sleep(3000);
+					driver.get(hiremee_url_opsportal);
+					//login-opsportal
+					Opsportal_email_id.sendKeys(ops_portal_username);
+					Opsportal_password.sendKeys(ops_portal_password);
+					//captcha
+					ops_portal_captcha=JOptionPane.showInputDialog("Enter the captcha value");
+					ops_captcha_value.sendKeys(ops_portal_captcha);
+					ops_login_submit.click();
+					//company activation
+					ExplicitWait(driver,ops_college_details);
+					ops_college_details.click();
+					ExplicitWait(driver,ops_college_activation_status);
+					ops_college_activation_status.click();
+					ExplicitWait(driver, ops_college_Activation_notes);
+					ops_college_Activation_notes.sendKeys("Automation Team");
+					ExplicitWait(driver,ops_college_Activation_submit);
+					ops_college_Activation_submit.click();
+					Thread.sleep(20000);
+					driver.close();
+				}
+			}
 		}
 		catch(Exception e)
 		{

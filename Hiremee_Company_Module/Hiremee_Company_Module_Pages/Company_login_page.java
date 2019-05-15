@@ -30,8 +30,8 @@ public class Company_login_page extends Driver_Class
 	WebDriver driver;
 	String url_hiremee_company_login;
 	String company_login_captcha;
-	String company_Email;
-	String company_Password="Temp!123";
+	//String company_Email;
+	//String company_Password="Temp!123";
 
 	Excel_Sheet excel=new Excel_Sheet(); 
 	public Company_login_page(WebDriver l1driver)
@@ -50,13 +50,13 @@ public class Company_login_page extends Driver_Class
 			url_hiremee_company_login=excel.Read_data(3, 54, 11);
 			driver.get(url_hiremee_company_login);
 			excel.Write_data_pass(3, 54, 12);
-			company_Email=excel.Read_data(3, 56, 11);
-			//Company_Email_ID.sendKeys(Comapany_Registration_Page.company_Email);
-			Company_Email_ID.sendKeys(company_Email);
+			//company_Email=excel.Read_data(3, 56, 11);
+			Company_Email_ID.sendKeys(Comapany_Registration_Page.company_Email);
+			//Company_Email_ID.sendKeys(company_Email);
 			excel.Write_data_pass(3, 56, 12);
-			company_Password=excel.Read_data(3, 58, 11);
-			//Company_Password.sendKeys(Comapany_Registration_Page.company_Password);
-			Company_Password.sendKeys(company_Password);
+			//company_Password=excel.Read_data(3, 58, 11);
+			Company_Password.sendKeys(Comapany_Registration_Page.company_Password);
+			//Company_Password.sendKeys(company_Password);
 			excel.Write_data_pass(3, 58, 12);
 			//captcha
 			company_login_captcha=JOptionPane.showInputDialog("Enter the answer for above captcha:");
