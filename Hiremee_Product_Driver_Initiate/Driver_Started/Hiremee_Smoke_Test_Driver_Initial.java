@@ -104,8 +104,8 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		extent.attachReporter(smoke_testing);
 		extent.setSystemInfo("Host Name", "Smoke_Testing");
 		extent.setSystemInfo("Environment", "UAT");
-		extent.setSystemInfo("User Name", "Automation Tester");
-		smoke_testing.config().setDocumentTitle("Hiremee_Web_Portal_UAT_Smoke_Testing");
+		extent.setSystemInfo("User Name", "Automation Team");
+		smoke_testing.config().setDocumentTitle("Hiremee_UAT_Smoke_Testing");
 		smoke_testing.config().setReportName("Hiremee_Execution_Report");		
 		smoke_testing.config().setTheme(Theme.DARK);
 	}
@@ -124,29 +124,11 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		else if(browser_name.equalsIgnoreCase("chrome"))
 		{
 			//Chrome
+
 			System.setProperty("webdriver.chrome.driver",config.getChromeDriver());
 			driver = new ChromeDriver();
 		}
 		Reporter.log(">=============================Hiremee_Project_Driver_Initiated=====================================<",true);
-
-		//Grid_hub_node-start---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		/*
-		//Raj system-client
-		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		cap.setPlatform(Platform.WINDOWS);
-		URL url=new URL("http://172.18.1.34:36728/wd/hub");
-		 */
-
-		/*
-		//Suresh System-client
-		DesiredCapabilities cap = DesiredCapabilities.firefox();
-		cap.setPlatform(Platform.WINDOWS);
-		URL url=new URL("http://172.18.1.31:45162/wd/hub");
-
-		driver=new RemoteWebDriver(url, cap);
-		//Grid_hub_node-end-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		 */
-
 		driver.manage().window().maximize();
 		Reporter.log(">=============================Hiremee_Project_Browser_Started=====================================<",true);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -168,7 +150,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}
 	}
-	/*
+
 	@Test(priority=1)
 	public void Hiremee_Automation_candidate_module_login_page() throws Exception
 	{
@@ -212,7 +194,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 		}	
 	}
-	
+
 	@Test(priority=4)
 	public void Hiremee_Automation_candidate_module_Take_Online_Assessment_page() throws Exception
 	{
@@ -321,7 +303,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			throw(e);
+		throw(e);
 
 		}	
 	}
@@ -1065,7 +1047,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 			throw(e);
 		}
 	}	
-	*/
+
 
 	/*
 	//Assessment_module
@@ -1389,7 +1371,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 
 	}
 	 */
-/*
+
 	//cms page
 	@Test(priority=94)
 	public void Hiremee_Cms_Home_Testcase() throws Exception 
@@ -1885,6 +1867,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		catch(Exception e)
 		{
 			throw(e);
+			
 		}
 	}
 
@@ -1923,7 +1906,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -1936,7 +1919,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -1950,7 +1933,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -1964,7 +1947,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -1978,7 +1961,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -1992,7 +1975,7 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
 
@@ -2006,10 +1989,10 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		}
 		catch(Exception e)
 		{
-			//throw(e);
+			throw(e);
 		}
 	}
-*/
+
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception
 	{
@@ -2030,12 +2013,12 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		{
 			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" Test Case Skipped", ExtentColor.YELLOW));
 		}
-		
+
 	}
 	@AfterTest
 	public void driver_close() throws Exception {
 		driver.quit();
-		extent.flush();
+		//extent.flush();
 		Thread.sleep(1000);
 		//Count  for pass or fail of skip
 		config=new Property_File_Config();
@@ -2088,9 +2071,9 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 				"                            <tbody>\r\n" +
 				"                            <tr>\r\n" +
 				"                                <tr> <td colspan=\"8\" align=\"center\">Automation_Testing_Report</td></tr>\r\n"+
-				"                                <tr> <td>Project Name</td>"+"<td colspan=\"8\">"+"HireMee Pro Web"+"</td></tr>\r\n"+
+				"                                <tr> <td>Project Name</td>"+"<td colspan=\"8\">"+"HireMee 9.1 Web"+"</td></tr>\r\n"+
 				"                                <tr> <td>Test Suite</td>"+"<td colspan=\"8\">"+"Smoke_Test"+"</td></tr>\r\n"+
-				"                                <tr> <td>Browser</td>"+"<td colspan=\"8\">"+"Chrome_Browser"+"</td></tr>\r\n"+
+				"                                <tr> <td>Browser</td>"+"<td colspan=\"8\">"+"Firefox_Browser"+"</td></tr>\r\n"+
 				// "                                <tr> <td>Started Date</td>"+"<td colspan=\"8\">"+Start_Date+"</td></tr>\r\n"+
 				"                               <tr> <td>Started Date</td>"+"<td colspan=\"8\">"+Start_Date+"</td></tr>\r\n"+
 				"                                <tr> <td>End Date</td>"+"<td colspan=\"8\">"+End_Date+"</td></tr>\r\n"+
@@ -2117,13 +2100,14 @@ public class Hiremee_Smoke_Test_Driver_Initial {
 		email.setAuthenticator(new DefaultAuthenticator("irudayaraj.n@veetechnologies.com", "Geri%9r%rREw"));
 		email.setSSLOnConnect(true);
 		email.setFrom("irudayaraj.n@veetechnologies.com");
-		email.setSubject("HireMee_mail _Pro_Live_Smoke_Testing_Extent_Report");
-		email.addTo("irudayaraj.n@veetechnologies.com");
+		email.setSubject("HireMee_9.1_UAT_Smoke_Testing_Extent_Report");
 		email.addCc("suresh.k@veetechnologies.com");
+		email.addTo("irudayaraj.n@veetechnologies.com");
+
 		email.addCc("arunkumar.a@veetechnologies.com");
 		email.addCc("udhayakumar.n@veetechnologies.com");
 		email.addCc("senthilkumar.t@veetechnologies.com");
-		//mail attachement
+		 		//mail attachement
 		EmailAttachment attachment = new EmailAttachment();
 		//attachment.setPath("./HireMee_Pro_Smoke_Report.zip");
 		attachment.setPath("./Reports/Hiremee_Smoke_Testing_ExtentReport.html");

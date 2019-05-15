@@ -8,16 +8,16 @@
     <classes>
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial"/>
     </classes>
-  </test> <!-- Test -->
+  </test> 
   
-  
+    
    <!-- Firefox Browser -->
-  <test thread-count="20" name="Automation_Testing_Firefox_Browser" group-by-instances="true">
+	  <!-- <test thread-count="20" name="Automation_Testing_Firefox_Browser" group-by-instances="true">
   	<parameter name="browser" value="firefox"/>
     <classes>
       <class name="Driver_Started.Hiremee_Smoke_Test_Driver_Initial"/>
     </classes>
-  </test> <!-- Test -->
+  	</test>   -->
   
 </suite> <!-- Suite -->
 

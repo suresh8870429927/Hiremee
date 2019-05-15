@@ -73,5 +73,7 @@
 	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/slf4j-api-1.6.6.jar"/>
 	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/zt-zip-1.13.jar"/>
 	<classpathentry kind="lib" path="D:/automation/Jar/ziputil/zt-zip-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/automation/Jar/log4j/log4j/log4j-api-2.11.1.jar"/>
+	<classpathentry kind="lib" path="D:/automation/Jar/log4j/log4j/log4j-core-2.11.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

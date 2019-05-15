@@ -1,26 +1,26 @@
 Chrome_Driver=./Driver/chromedriver.exe
 Firefox_Driver=./Driver/geckodriver.exe
 
-Hiremee_Home_url=http://172.18.1.87:81/
+Hiremee_Home_url=http://dev.hiremee.co.in/
 
 //Candidate 
-candidate_url=http://172.18.1.87:81/candidate
-candidate_Username=canregister@mailnesia.com
+candidate_url=http://dev.hiremee.co.in/candidate
+candidate_Username=Automationcandi123@mailnesia.com
 Candidate_Password=123456
 
 //College 
-College_url=http://172.18.1.87:81/college
-college_username=keerthana@mailnesia.com
+College_url=http://dev.hiremee.co.in/college
+college_username=test2@gmail.com
 college_password=Temp!123
 
 //company
-Company_url=http://172.18.1.87:81/company
-company_username=finaltesting3@hiremee.com
+Company_url=http://dev.hiremee.co.in/company
+company_username=Automationcompany14@hiremee.com
 company_password=Temp!123
 
 //Recruiter
-Recruiter_url=http://172.18.1.87:81/company
-recruiter_username=finalrec1@hiremee.com
+Recruiter_url=http://dev.hiremee.co.in/company
+recruiter_username=AutomationRecruiter12@mailnesia.com
 recruiter_password=Temp!123
 
 //Assessment
@@ -34,5 +34,64 @@ xml_path=./test-output/testng-results.xml
 
 //Extent_Report
 Report_extent_file=/Reports/Hiremee_Smoke_Testing_ExtentReport.html
+
+
+
+
+
+
+
+
+// Here we have defined root logger
+log4j.rootLogger=INFO,CONSOLE,R,HTML,TTCC
+ 
+// Here we define the appender
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+log4j.appender.TTCC=org.apache.log4j.RollingFileAppender
+log4j.appender.HTML=org.apache.log4j.FileAppender
+ 
+// Here we define log file location
+log4j.appender.R.File=./log/testlog.log
+log4j.appender.TTCC.File=./log/testlog1.log
+log4j.appender.HTML.File=./log/application.html
+ 
+// Here we define the layout and pattern
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern= %5p [%t] (%F:%L)- %m%n
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d - %c -%p - %m%n
+log4j.appender.TTCC.layout=org.apache.log4j.TTCCLayout
+log4j.appender.TTCC.layout.DateFormat=ISO8601
+log4j.appender.HTML.layout=org.apache.log4j.HTMLLayout
+log4j.appender.HTML.layout.Title=Application log
+log4j.appender.HTML.layout.LocationInfo=true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

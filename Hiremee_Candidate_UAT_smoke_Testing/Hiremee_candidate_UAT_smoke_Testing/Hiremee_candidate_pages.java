@@ -3,6 +3,8 @@ package Hiremee_candidate_UAT_smoke_Testing;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -98,6 +100,7 @@ public class Hiremee_candidate_pages extends Hiremee_Smoke_Test_Driver_Initial
 	//String password;
 	//String url;
 	Excel_Sheet_Config excel=new Excel_Sheet_Config();
+	
 	public Hiremee_candidate_pages(WebDriver candidriver)
 	{
 		this.driver=candidriver;
@@ -113,6 +116,7 @@ public class Hiremee_candidate_pages extends Hiremee_Smoke_Test_Driver_Initial
 			config=new Property_File_Config();
 			driver.get(config.getCandidate_url());
 			excel.Write_data_pass(1, 19, 11);
+	
 		}
 		catch(Exception e)
 		{
